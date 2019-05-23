@@ -3,17 +3,16 @@
 namespace backend\controllers;
 
 use Yii;
-use backend\models\Post;
-use backend\models\PostSearch;
+use backend\models\Location;
+use backend\models\LocationSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\models\News;
 
 /**
- * PostController implements the CRUD actions for Post model.
+ * LocationController implements the CRUD actions for Location model.
  */
-class PostController extends Controller
+class LocationController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -31,12 +30,12 @@ class PostController extends Controller
     }
 
     /**
-     * Lists all Post models.
+     * Lists all Location models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new PostSearch();
+        $searchModel = new LocationSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -46,7 +45,7 @@ class PostController extends Controller
     }
 
     /**
-     * Displays a single Post model.
+     * Displays a single Location model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -59,16 +58,16 @@ class PostController extends Controller
     }
 
     /**
-     * Creates a new Post model.
+     * Creates a new Location model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Post();
+        $model = new Location();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_post]);
+            return $this->redirect(['view', 'id' => $model->id_location]);
         }
 
         return $this->render('create', [
@@ -77,7 +76,7 @@ class PostController extends Controller
     }
 
     /**
-     * Updates an existing Post model.
+     * Updates an existing Location model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -87,15 +86,8 @@ class PostController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post())) {
-            $model->status = 1;
-            $model->save();
-            $news = new News();
-            $news->id_post = $id;
-            $news->status_news = 1;
-            $news->date = date('d-m-Y');
-            $news->save();
-            return $this->redirect(['view', 'id' => $model->id_post]);
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id_location]);
         }
 
         return $this->render('update', [
@@ -104,7 +96,7 @@ class PostController extends Controller
     }
 
     /**
-     * Deletes an existing Post model.
+     * Deletes an existing Location model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -118,15 +110,15 @@ class PostController extends Controller
     }
 
     /**
-     * Finds the Post model based on its primary key value.
+     * Finds the Location model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Post the loaded model
+     * @return Location the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Post::findOne($id)) !== null) {
+        if (($model = Location::findOne($id)) !== null) {
             return $model;
         }
 
