@@ -12,15 +12,13 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'created_by')->textInput() ?>
+    
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'content')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'updated_at')->textInput() ?>
+    
 
     <?= $form->field($model, 'status')->textInput() ?>
 
@@ -28,7 +26,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id_location')->textInput() ?>
 
-    <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'file')->fileInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
