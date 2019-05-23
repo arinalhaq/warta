@@ -16,7 +16,7 @@ use Yii;
  * @property int $status
  * @property int $id_category
  * @property int $id_location
- * @property int $updated_by
+ * @property string $image
  *
  * @property News[] $news
  * @property Location $location
@@ -38,10 +38,10 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['created_by', 'title', 'content', 'created_at', 'updated_at', 'status', 'id_category', 'id_location'], 'required'],
-            [['created_by', 'created_at', 'updated_at', 'status', 'id_category', 'id_location', 'updated_by'], 'integer'],
+            [['created_by', 'title', 'content', 'created_at', 'updated_at', 'status', 'id_category', 'id_location', 'image'], 'required'],
+            [['created_by', 'created_at', 'updated_at', 'status', 'id_category', 'id_location'], 'integer'],
             [['content'], 'string'],
-            [['title'], 'string', 'max' => 255],
+            [['title', 'image'], 'string', 'max' => 255],
             [['id_location'], 'exist', 'skipOnError' => true, 'targetClass' => Location::className(), 'targetAttribute' => ['id_location' => 'id_location']],
             [['id_category'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['id_category' => 'id_category']],
         ];
@@ -62,7 +62,7 @@ class Post extends \yii\db\ActiveRecord
             'status' => 'Status',
             'id_category' => 'Id Category',
             'id_location' => 'Id Location',
-            'updated_by' => 'Updated By',
+            'image' => 'Image',
         ];
     }
 
