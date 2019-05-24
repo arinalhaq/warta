@@ -8,8 +8,6 @@ use backend\models\PostSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\models\News;
-use yii\web\UploadedFile;
 
 /**
  * PostController implements the CRUD actions for Post model.
@@ -68,18 +66,7 @@ class PostController extends Controller
     {
         $model = new Post();
 
-        $path = 'F:/xampp2/htdocs/advanced/common/assets/upload/';
-
-        if ($model->load(Yii::$app->request->post())) {
-            $model->id_user = Yii::$app->user->id;
-            $model->file = UploadedFile::getInstance($model, 'file');
-
-            $model->file->saveAs($path . $model->file->baseName . '.' . $model->file->extension);
-
-            $model->image = 'http://localhost/advanced/common/assets/upload/' . $model->file->baseName . '.' . $model->file->extension;
-            $model->file = null;
-
-            $model->save(false);
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id_post]);
         }
 
@@ -99,14 +86,7 @@ class PostController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post())) {
-            $model->status = 1;
-            $model->save();
-            $news = new News();
-            $news->id_post = $id;
-            $news->status_news = 1;
-            $news->date = date('d-m-Y');
-            $news->save();
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id_post]);
         }
 
