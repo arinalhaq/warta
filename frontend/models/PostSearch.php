@@ -1,13 +1,14 @@
 <?php
 
-namespace backend\models;
+namespace frontend\models;
 
+use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Post;
+use frontend\models\Post;
 
 /**
- * PostSearch represents the model behind the search form of `backend\models\Post`.
+ * PostSearch represents the model behind the search form of `frontend\models\Post`.
  */
 class PostSearch extends Post
 {
@@ -40,7 +41,7 @@ class PostSearch extends Post
      */
     public function search($params)
     {
-        $query = Post::find();
+        $query = Post::find()->where(['id_user' => Yii::$app->user->id]);
 
         // add conditions that should always apply here
 
