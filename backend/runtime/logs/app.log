@@ -863,6 +863,7 @@ $_SERVER = [
     'REQUEST_TIME' => 1558623703
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 2019-05-24 04:19:14 [::1][2][gpth4m07ujcbg671oe4bavb8ke][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "users". in F:\xampp2\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:537
 Stack trace:
 #0 F:\xampp2\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('users', Array)
@@ -1043,6 +1044,30 @@ Stack trace:
 #2 {main}
 2019-05-24 04:40:35 [::1][-][eosl8omhaa7ci08sghujjvem13][info][application] $_GET = []
 =======
+=======
+2019-05-24 04:53:49 [::1][-][je5dh2ifo2hg16vn0qeheau847][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: C:\xampp1\htdocs\warta/vendor/bower/adminlte/dist in C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php:455
+Stack trace:
+#0 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetBundle.php(185): yii\web\AssetManager->publish('C:\\xampp1\\htdoc...', Array)
+#1 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(237): yii\web\AssetManager->loadBundle('backend\\assets\\...', Array, true)
+#3 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(286): yii\web\AssetManager->getBundle('backend\\assets\\...')
+#4 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetBundle.php(125): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#5 C:\xampp1\htdocs\warta\backend\views\layouts\login.php(9): yii\web\AssetBundle::register(Object(yii\web\View))
+#6 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp1\\htdoc...')
+#7 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp1\\htdoc...', Array)
+#8 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(399): yii\base\View->renderFile('C:\\xampp1\\htdoc...', Array, Object(backend\controllers\SiteController))
+#9 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#10 C:\xampp1\htdocs\warta\backend\controllers\SiteController.php(85): yii\base\Controller->render('login', Array)
+#11 [internal function]: backend\controllers\SiteController->actionLogin()
+#12 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#15 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#16 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\xampp1\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#18 {main}
+2019-05-24 04:53:49 [::1][-][je5dh2ifo2hg16vn0qeheau847][info][application] $_GET = []
+>>>>>>> 242386c93d767ae7c1731cc2281fe78288683ca5
 2019-05-24 04:28:38 [::1][-][hqrcjiu0meobg511djde6s6qqm][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\widgets\ActiveField::widgets() in C:\xampp\htdocs\warta\vendor\yiisoft\yii2\base\Component.php:300
 Stack trace:
 #0 C:\xampp\htdocs\warta\backend\views\post\_form.php(20): yii\base\Component->__call('widgets', Array)
@@ -1072,11 +1097,18 @@ $_FILES = []
 
 $_COOKIE = [
 <<<<<<< HEAD
+<<<<<<< HEAD
     '_csrf-backend' => '4dd06b0cc495b5c490c4046c1c92fefdd92cdf286b162f05a84b318dbcf833fda:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"O9zNgJx87iq1KcxU9DMD__H1a0DsSNt5\";}'
     'advanced-frontend' => '4s714ov3ftvoltghjgvf08aotq'
     '_csrf-frontend' => '2da81bddafd439a086399cf1e3c688360652b8168bb0f7a0c3d0b5518319069da:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"DxN3Gj8YmOWJY9BOeTU7nOq2cNMNxoiC\";}'
     'advanced-backend' => 'eosl8omhaa7ci08sghujjvem13'
 =======
+=======
+    '_identity-backend' => 'ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"3Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw\",2592000]\";}'
+    'advanced-frontend' => 'v82stmikuo6tiu8ggkpudgaj87'
+    '_csrf-frontend' => 'f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"alWC_oJx45-pE3y45M_Ap6LMmXP_dioa\";}'
+    'advanced-backend' => 'je5dh2ifo2hg16vn0qeheau847'
+>>>>>>> 242386c93d767ae7c1731cc2281fe78288683ca5
     'style' => 'color2'
     'Pycharm-c98d4b0' => 'c9ea4e60-edbf-44bb-a162-ef3970ba22aa'
     '_identity-backend' => 'b6d30f020c5161fc9cc85b7ba4e8d736bb84e5ea8607d593ef1e6996aaf975e8a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[4,\"yyq3EFJQwGURqypf-MtT_bZVRv0s-vR3\",2592000]\";}'
@@ -1090,6 +1122,7 @@ $_COOKIE = [
 $_SESSION = [
     '__flash' => []
 <<<<<<< HEAD
+<<<<<<< HEAD
     '__returnUrl' => '/advanced/backend/web/'
 ]
 
@@ -1098,6 +1131,15 @@ $_SERVER = [
     'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'REDIRECT_OPENSSL_CONF' => 'F:/xampp2/apache/bin/openssl.cnf'
 =======
+=======
+    '__returnUrl' => '/warta/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+>>>>>>> 242386c93d767ae7c1731cc2281fe78288683ca5
 ]
 
 $_SERVER = [
@@ -1110,10 +1152,16 @@ $_SERVER = [
     'REDIRECT_TMP' => '\\xampp\\tmp'
     'REDIRECT_STATUS' => '200'
 <<<<<<< HEAD
+<<<<<<< HEAD
     'MIBDIRS' => 'F:/xampp2/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'F:/xampp2/apache/bin/openssl.cnf'
 =======
+=======
+    'MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+>>>>>>> 242386c93d767ae7c1731cc2281fe78288683ca5
     'MIBDIRS' => 'C:/xampp/php/extras/mibs'
     'MYSQL_HOME' => '\\xampp\\mysql\\bin'
     'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
@@ -1123,6 +1171,21 @@ $_SERVER = [
     'TMP' => '\\xampp\\tmp'
     'HTTP_HOST' => 'localhost'
     'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-backend=ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%223Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw%22%2C2592000%5D%22%3B%7D; advanced-frontend=v82stmikuo6tiu8ggkpudgaj87; _csrf-frontend=f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22alWC_oJx45-pE3y45M_Ap6LMmXP_dioa%22%3B%7D; advanced-backend=je5dh2ifo2hg16vn0qeheau847'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\ProgramData\\chocolatey\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp1\\php;C:\\Program Files\\Git\\cmd;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Lenovo\\AppData\\Local\\atom\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;\"C:\\instantclient_11_2;\";C:\\Program Files\\Java\\jdk-10.0.2\\bin;C:\\Program Files\\Java\\jdk1.8.0_77\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Lenovo\\AppData\\Local\\.meteor;C:\\Users\\Lenovo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Lenovo\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
 <<<<<<< HEAD
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36 OPR/60.0.3255.95'
@@ -1159,6 +1222,7 @@ $_SERVER = [
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '::1'
 <<<<<<< HEAD
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'F:/xampp2/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -1168,6 +1232,16 @@ $_SERVER = [
     'REMOTE_PORT' => '50381'
     'REDIRECT_URL' => '/advanced/backend/web/uder'
 =======
+=======
+    'DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp1/htdocs/warta/backend/web/index.php'
+    'REMOTE_PORT' => '63036'
+    'REDIRECT_URL' => '/warta/backend/web/site/login'
+>>>>>>> 242386c93d767ae7c1731cc2281fe78288683ca5
     'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -1182,12 +1256,706 @@ $_SERVER = [
     'REQUEST_METHOD' => 'GET'
     'QUERY_STRING' => ''
 <<<<<<< HEAD
+<<<<<<< HEAD
     'REQUEST_URI' => '/advanced/backend/web/uder'
     'SCRIPT_NAME' => '/advanced/backend/web/index.php'
     'PHP_SELF' => '/advanced/backend/web/index.php'
     'REQUEST_TIME_FLOAT' => 1558665635.335
     'REQUEST_TIME' => 1558665635
 =======
+=======
+    'REQUEST_URI' => '/warta/backend/web/site/login'
+    'SCRIPT_NAME' => '/warta/backend/web/index.php'
+    'PHP_SELF' => '/warta/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558666429.094
+    'REQUEST_TIME' => 1558666429
+]
+2019-05-24 04:55:06 [::1][-][je5dh2ifo2hg16vn0qeheau847][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: The file or directory to be published does not exist: C:\xampp1\htdocs\warta/vendor/bower/adminlte/dist in C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php:455
+Stack trace:
+#0 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetBundle.php(185): yii\web\AssetManager->publish('C:\\xampp1\\htdoc...', Array)
+#1 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(237): yii\web\AssetManager->loadBundle('backend\\assets\\...', Array, true)
+#3 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(286): yii\web\AssetManager->getBundle('backend\\assets\\...')
+#4 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetBundle.php(125): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#5 C:\xampp1\htdocs\warta\backend\views\layouts\login.php(9): yii\web\AssetBundle::register(Object(yii\web\View))
+#6 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp1\\htdoc...')
+#7 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp1\\htdoc...', Array)
+#8 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(399): yii\base\View->renderFile('C:\\xampp1\\htdoc...', Array, Object(backend\controllers\SiteController))
+#9 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#10 C:\xampp1\htdocs\warta\backend\controllers\SiteController.php(85): yii\base\Controller->render('login', Array)
+#11 [internal function]: backend\controllers\SiteController->actionLogin()
+#12 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#13 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#15 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#16 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 C:\xampp1\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#18 {main}
+2019-05-24 04:55:06 [::1][-][je5dh2ifo2hg16vn0qeheau847][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => 'ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"3Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw\",2592000]\";}'
+    'advanced-frontend' => 'v82stmikuo6tiu8ggkpudgaj87'
+    '_csrf-frontend' => 'f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"alWC_oJx45-pE3y45M_Ap6LMmXP_dioa\";}'
+    'advanced-backend' => 'je5dh2ifo2hg16vn0qeheau847'
+    '_csrf-backend' => '4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/warta/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-backend=ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%223Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw%22%2C2592000%5D%22%3B%7D; advanced-frontend=v82stmikuo6tiu8ggkpudgaj87; _csrf-frontend=f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22alWC_oJx45-pE3y45M_Ap6LMmXP_dioa%22%3B%7D; advanced-backend=je5dh2ifo2hg16vn0qeheau847; _csrf-backend=4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\ProgramData\\chocolatey\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp1\\php;C:\\Program Files\\Git\\cmd;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Lenovo\\AppData\\Local\\atom\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;\"C:\\instantclient_11_2;\";C:\\Program Files\\Java\\jdk-10.0.2\\bin;C:\\Program Files\\Java\\jdk1.8.0_77\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Lenovo\\AppData\\Local\\.meteor;C:\\Users\\Lenovo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Lenovo\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp1/htdocs/warta/backend/web/index.php'
+    'REMOTE_PORT' => '63058'
+    'REDIRECT_URL' => '/warta/backend/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/warta/backend/web/site/login'
+    'SCRIPT_NAME' => '/warta/backend/web/index.php'
+    'PHP_SELF' => '/warta/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558666506.118
+    'REQUEST_TIME' => 1558666506
+]
+2019-05-24 04:56:35 [::1][-][je5dh2ifo2hg16vn0qeheau847][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\assets\FontawesomeAsset' in file: C:\xampp1\htdocs\warta\backend/assets/FontawesomeAsset.php. Namespace missing? in C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\assets\\Font...')
+#1 [internal function]: spl_autoload_call('app\\assets\\Font...')
+#2 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(431): ReflectionClass->__construct('app\\assets\\Font...')
+#3 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(365): yii\di\Container->getDependencies('app\\assets\\Font...')
+#4 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('app\\assets\\Font...', Array, Array)
+#5 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('app\\assets\\Font...', Array, Array)
+#6 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(264): yii\BaseYii::createObject(Array)
+#7 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(237): yii\web\AssetManager->loadBundle('app\\assets\\Font...', Array, true)
+#8 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(286): yii\web\AssetManager->getBundle('app\\assets\\Font...')
+#9 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(291): yii\web\View->registerAssetBundle('app\\assets\\Font...', NULL)
+#10 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetBundle.php(125): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#11 C:\xampp1\htdocs\warta\backend\views\layouts\login.php(9): yii\web\AssetBundle::register(Object(yii\web\View))
+#12 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp1\\htdoc...')
+#13 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp1\\htdoc...', Array)
+#14 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(399): yii\base\View->renderFile('C:\\xampp1\\htdoc...', Array, Object(backend\controllers\SiteController))
+#15 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#16 C:\xampp1\htdocs\warta\backend\controllers\SiteController.php(85): yii\base\Controller->render('login', Array)
+#17 [internal function]: backend\controllers\SiteController->actionLogin()
+#18 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#19 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#20 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#21 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#22 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 C:\xampp1\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#24 {main}
+2019-05-24 04:56:30 [::1][-][je5dh2ifo2hg16vn0qeheau847][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => 'ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"3Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw\",2592000]\";}'
+    'advanced-frontend' => 'v82stmikuo6tiu8ggkpudgaj87'
+    '_csrf-frontend' => 'f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"alWC_oJx45-pE3y45M_Ap6LMmXP_dioa\";}'
+    'advanced-backend' => 'je5dh2ifo2hg16vn0qeheau847'
+    '_csrf-backend' => '4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/warta/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-backend=ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%223Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw%22%2C2592000%5D%22%3B%7D; advanced-frontend=v82stmikuo6tiu8ggkpudgaj87; _csrf-frontend=f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22alWC_oJx45-pE3y45M_Ap6LMmXP_dioa%22%3B%7D; advanced-backend=je5dh2ifo2hg16vn0qeheau847; _csrf-backend=4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\ProgramData\\chocolatey\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp1\\php;C:\\Program Files\\Git\\cmd;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Lenovo\\AppData\\Local\\atom\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;\"C:\\instantclient_11_2;\";C:\\Program Files\\Java\\jdk-10.0.2\\bin;C:\\Program Files\\Java\\jdk1.8.0_77\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Lenovo\\AppData\\Local\\.meteor;C:\\Users\\Lenovo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Lenovo\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp1/htdocs/warta/backend/web/index.php'
+    'REMOTE_PORT' => '63079'
+    'REDIRECT_URL' => '/warta/backend/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/warta/backend/web/site/login'
+    'SCRIPT_NAME' => '/warta/backend/web/index.php'
+    'PHP_SELF' => '/warta/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558666590.493
+    'REQUEST_TIME' => 1558666590
+]
+2019-05-24 05:00:07 [::1][-][je5dh2ifo2hg16vn0qeheau847][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\assets\FontawesomeAsset' in file: C:\xampp1\htdocs\warta\backend/assets/FontawesomeAsset.php. Namespace missing? in C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\assets\\Font...')
+#1 [internal function]: spl_autoload_call('app\\assets\\Font...')
+#2 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(431): ReflectionClass->__construct('app\\assets\\Font...')
+#3 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(365): yii\di\Container->getDependencies('app\\assets\\Font...')
+#4 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('app\\assets\\Font...', Array, Array)
+#5 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('app\\assets\\Font...', Array, Array)
+#6 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(264): yii\BaseYii::createObject(Array)
+#7 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(237): yii\web\AssetManager->loadBundle('app\\assets\\Font...', Array, true)
+#8 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(286): yii\web\AssetManager->getBundle('app\\assets\\Font...')
+#9 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(291): yii\web\View->registerAssetBundle('app\\assets\\Font...', NULL)
+#10 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetBundle.php(125): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#11 C:\xampp1\htdocs\warta\backend\views\layouts\login.php(10): yii\web\AssetBundle::register(Object(yii\web\View))
+#12 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp1\\htdoc...')
+#13 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp1\\htdoc...', Array)
+#14 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(399): yii\base\View->renderFile('C:\\xampp1\\htdoc...', Array, Object(backend\controllers\SiteController))
+#15 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#16 C:\xampp1\htdocs\warta\backend\controllers\SiteController.php(85): yii\base\Controller->render('login', Array)
+#17 [internal function]: backend\controllers\SiteController->actionLogin()
+#18 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#19 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#20 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#21 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#22 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 C:\xampp1\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#24 {main}
+2019-05-24 05:00:07 [::1][-][je5dh2ifo2hg16vn0qeheau847][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => 'ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"3Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw\",2592000]\";}'
+    'advanced-frontend' => 'v82stmikuo6tiu8ggkpudgaj87'
+    '_csrf-frontend' => 'f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"alWC_oJx45-pE3y45M_Ap6LMmXP_dioa\";}'
+    'advanced-backend' => 'je5dh2ifo2hg16vn0qeheau847'
+    '_csrf-backend' => '4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/warta/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-backend=ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%223Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw%22%2C2592000%5D%22%3B%7D; advanced-frontend=v82stmikuo6tiu8ggkpudgaj87; _csrf-frontend=f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22alWC_oJx45-pE3y45M_Ap6LMmXP_dioa%22%3B%7D; advanced-backend=je5dh2ifo2hg16vn0qeheau847; _csrf-backend=4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\ProgramData\\chocolatey\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp1\\php;C:\\Program Files\\Git\\cmd;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Lenovo\\AppData\\Local\\atom\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;\"C:\\instantclient_11_2;\";C:\\Program Files\\Java\\jdk-10.0.2\\bin;C:\\Program Files\\Java\\jdk1.8.0_77\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Lenovo\\AppData\\Local\\.meteor;C:\\Users\\Lenovo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Lenovo\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp1/htdocs/warta/backend/web/index.php'
+    'REMOTE_PORT' => '63192'
+    'REDIRECT_URL' => '/warta/backend/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/warta/backend/web/site/login'
+    'SCRIPT_NAME' => '/warta/backend/web/index.php'
+    'PHP_SELF' => '/warta/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558666807.405
+    'REQUEST_TIME' => 1558666807
+]
+2019-05-24 05:02:32 [::1][-][je5dh2ifo2hg16vn0qeheau847][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\assets\FontawesomeAsset' in file: C:\xampp1\htdocs\warta\backend/assets/FontawesomeAsset.php. Namespace missing? in C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\assets\\Font...')
+#1 [internal function]: spl_autoload_call('app\\assets\\Font...')
+#2 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(431): ReflectionClass->__construct('app\\assets\\Font...')
+#3 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(365): yii\di\Container->getDependencies('app\\assets\\Font...')
+#4 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('app\\assets\\Font...', Array, Array)
+#5 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('app\\assets\\Font...', Array, Array)
+#6 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(264): yii\BaseYii::createObject(Array)
+#7 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(237): yii\web\AssetManager->loadBundle('app\\assets\\Font...', Array, true)
+#8 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(286): yii\web\AssetManager->getBundle('app\\assets\\Font...')
+#9 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(291): yii\web\View->registerAssetBundle('app\\assets\\Font...', NULL)
+#10 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetBundle.php(125): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#11 C:\xampp1\htdocs\warta\backend\views\layouts\login.php(10): yii\web\AssetBundle::register(Object(yii\web\View))
+#12 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp1\\htdoc...')
+#13 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp1\\htdoc...', Array)
+#14 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(399): yii\base\View->renderFile('C:\\xampp1\\htdoc...', Array, Object(backend\controllers\SiteController))
+#15 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#16 C:\xampp1\htdocs\warta\backend\controllers\SiteController.php(85): yii\base\Controller->render('login', Array)
+#17 [internal function]: backend\controllers\SiteController->actionLogin()
+#18 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#19 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#20 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#21 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#22 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 C:\xampp1\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#24 {main}
+2019-05-24 05:02:31 [::1][-][je5dh2ifo2hg16vn0qeheau847][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => 'ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"3Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw\",2592000]\";}'
+    'advanced-frontend' => 'v82stmikuo6tiu8ggkpudgaj87'
+    '_csrf-frontend' => 'f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"alWC_oJx45-pE3y45M_Ap6LMmXP_dioa\";}'
+    'advanced-backend' => 'je5dh2ifo2hg16vn0qeheau847'
+    '_csrf-backend' => '4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/warta/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-backend=ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%223Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw%22%2C2592000%5D%22%3B%7D; advanced-frontend=v82stmikuo6tiu8ggkpudgaj87; _csrf-frontend=f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22alWC_oJx45-pE3y45M_Ap6LMmXP_dioa%22%3B%7D; advanced-backend=je5dh2ifo2hg16vn0qeheau847; _csrf-backend=4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\ProgramData\\chocolatey\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp1\\php;C:\\Program Files\\Git\\cmd;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Lenovo\\AppData\\Local\\atom\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;\"C:\\instantclient_11_2;\";C:\\Program Files\\Java\\jdk-10.0.2\\bin;C:\\Program Files\\Java\\jdk1.8.0_77\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Lenovo\\AppData\\Local\\.meteor;C:\\Users\\Lenovo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Lenovo\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp1/htdocs/warta/backend/web/index.php'
+    'REMOTE_PORT' => '63274'
+    'REDIRECT_URL' => '/warta/backend/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/warta/backend/web/site/login'
+    'SCRIPT_NAME' => '/warta/backend/web/index.php'
+    'PHP_SELF' => '/warta/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558666951.942
+    'REQUEST_TIME' => 1558666951
+]
+2019-05-24 05:04:49 [::1][-][je5dh2ifo2hg16vn0qeheau847][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\assets\FontawesomeAsset' in file: C:\xampp1\htdocs\warta\backend/assets/FontawesomeAsset.php. Namespace missing? in C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\assets\\Font...')
+#1 [internal function]: spl_autoload_call('app\\assets\\Font...')
+#2 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(431): ReflectionClass->__construct('app\\assets\\Font...')
+#3 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(365): yii\di\Container->getDependencies('app\\assets\\Font...')
+#4 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('app\\assets\\Font...', Array, Array)
+#5 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('app\\assets\\Font...', Array, Array)
+#6 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(264): yii\BaseYii::createObject(Array)
+#7 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(237): yii\web\AssetManager->loadBundle('app\\assets\\Font...', Array, true)
+#8 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(286): yii\web\AssetManager->getBundle('app\\assets\\Font...')
+#9 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(291): yii\web\View->registerAssetBundle('app\\assets\\Font...', NULL)
+#10 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetBundle.php(125): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#11 C:\xampp1\htdocs\warta\backend\views\layouts\login.php(10): yii\web\AssetBundle::register(Object(yii\web\View))
+#12 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp1\\htdoc...')
+#13 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp1\\htdoc...', Array)
+#14 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(399): yii\base\View->renderFile('C:\\xampp1\\htdoc...', Array, Object(backend\controllers\SiteController))
+#15 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#16 C:\xampp1\htdocs\warta\backend\controllers\SiteController.php(85): yii\base\Controller->render('login', Array)
+#17 [internal function]: backend\controllers\SiteController->actionLogin()
+#18 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#19 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#20 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#21 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#22 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 C:\xampp1\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#24 {main}
+2019-05-24 05:04:49 [::1][-][je5dh2ifo2hg16vn0qeheau847][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => 'ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"3Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw\",2592000]\";}'
+    'advanced-frontend' => 'v82stmikuo6tiu8ggkpudgaj87'
+    '_csrf-frontend' => 'f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"alWC_oJx45-pE3y45M_Ap6LMmXP_dioa\";}'
+    'advanced-backend' => 'je5dh2ifo2hg16vn0qeheau847'
+    '_csrf-backend' => '4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/warta/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-backend=ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%223Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw%22%2C2592000%5D%22%3B%7D; advanced-frontend=v82stmikuo6tiu8ggkpudgaj87; _csrf-frontend=f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22alWC_oJx45-pE3y45M_Ap6LMmXP_dioa%22%3B%7D; advanced-backend=je5dh2ifo2hg16vn0qeheau847; _csrf-backend=4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\ProgramData\\chocolatey\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp1\\php;C:\\Program Files\\Git\\cmd;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Lenovo\\AppData\\Local\\atom\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;\"C:\\instantclient_11_2;\";C:\\Program Files\\Java\\jdk-10.0.2\\bin;C:\\Program Files\\Java\\jdk1.8.0_77\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Lenovo\\AppData\\Local\\.meteor;C:\\Users\\Lenovo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Lenovo\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp1/htdocs/warta/backend/web/index.php'
+    'REMOTE_PORT' => '63365'
+    'REDIRECT_URL' => '/warta/backend/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/warta/backend/web/site/login'
+    'SCRIPT_NAME' => '/warta/backend/web/index.php'
+    'PHP_SELF' => '/warta/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558667089.754
+    'REQUEST_TIME' => 1558667089
+]
+2019-05-24 05:09:44 [::1][-][je5dh2ifo2hg16vn0qeheau847][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\assets\FontawesomeAsset' in file: C:\xampp1\htdocs\warta\backend/assets/FontawesomeAsset.php. Namespace missing? in C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\assets\\Font...')
+#1 [internal function]: spl_autoload_call('app\\assets\\Font...')
+#2 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(431): ReflectionClass->__construct('app\\assets\\Font...')
+#3 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(365): yii\di\Container->getDependencies('app\\assets\\Font...')
+#4 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('app\\assets\\Font...', Array, Array)
+#5 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('app\\assets\\Font...', Array, Array)
+#6 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(264): yii\BaseYii::createObject(Array)
+#7 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(237): yii\web\AssetManager->loadBundle('app\\assets\\Font...', Array, true)
+#8 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(286): yii\web\AssetManager->getBundle('app\\assets\\Font...')
+#9 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(291): yii\web\View->registerAssetBundle('app\\assets\\Font...', NULL)
+#10 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetBundle.php(125): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#11 C:\xampp1\htdocs\warta\backend\views\layouts\login.php(9): yii\web\AssetBundle::register(Object(yii\web\View))
+#12 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp1\\htdoc...')
+#13 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp1\\htdoc...', Array)
+#14 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(399): yii\base\View->renderFile('C:\\xampp1\\htdoc...', Array, Object(backend\controllers\SiteController))
+#15 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#16 C:\xampp1\htdocs\warta\backend\controllers\SiteController.php(85): yii\base\Controller->render('login', Array)
+#17 [internal function]: backend\controllers\SiteController->actionLogin()
+#18 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#19 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#20 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#21 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#22 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 C:\xampp1\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#24 {main}
+2019-05-24 05:09:44 [::1][-][je5dh2ifo2hg16vn0qeheau847][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => 'ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"3Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw\",2592000]\";}'
+    'advanced-frontend' => 'v82stmikuo6tiu8ggkpudgaj87'
+    '_csrf-frontend' => 'f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"alWC_oJx45-pE3y45M_Ap6LMmXP_dioa\";}'
+    'advanced-backend' => 'je5dh2ifo2hg16vn0qeheau847'
+    '_csrf-backend' => '4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/warta/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-backend=ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%223Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw%22%2C2592000%5D%22%3B%7D; advanced-frontend=v82stmikuo6tiu8ggkpudgaj87; _csrf-frontend=f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22alWC_oJx45-pE3y45M_Ap6LMmXP_dioa%22%3B%7D; advanced-backend=je5dh2ifo2hg16vn0qeheau847; _csrf-backend=4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\ProgramData\\chocolatey\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp1\\php;C:\\Program Files\\Git\\cmd;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Lenovo\\AppData\\Local\\atom\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;\"C:\\instantclient_11_2;\";C:\\Program Files\\Java\\jdk-10.0.2\\bin;C:\\Program Files\\Java\\jdk1.8.0_77\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Lenovo\\AppData\\Local\\.meteor;C:\\Users\\Lenovo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Lenovo\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp1/htdocs/warta/backend/web/index.php'
+    'REMOTE_PORT' => '63532'
+    'REDIRECT_URL' => '/warta/backend/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/warta/backend/web/site/login'
+    'SCRIPT_NAME' => '/warta/backend/web/index.php'
+    'PHP_SELF' => '/warta/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558667384.617
+    'REQUEST_TIME' => 1558667384
+]
+2019-05-24 05:09:48 [::1][-][je5dh2ifo2hg16vn0qeheau847][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\assets\FontawesomeAsset' in file: C:\xampp1\htdocs\warta\backend/assets/FontawesomeAsset.php. Namespace missing? in C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\assets\\Font...')
+#1 [internal function]: spl_autoload_call('app\\assets\\Font...')
+#2 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(431): ReflectionClass->__construct('app\\assets\\Font...')
+#3 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(365): yii\di\Container->getDependencies('app\\assets\\Font...')
+#4 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('app\\assets\\Font...', Array, Array)
+#5 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('app\\assets\\Font...', Array, Array)
+#6 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(264): yii\BaseYii::createObject(Array)
+#7 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetManager.php(237): yii\web\AssetManager->loadBundle('app\\assets\\Font...', Array, true)
+#8 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(286): yii\web\AssetManager->getBundle('app\\assets\\Font...')
+#9 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\View.php(291): yii\web\View->registerAssetBundle('app\\assets\\Font...', NULL)
+#10 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\AssetBundle.php(125): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#11 C:\xampp1\htdocs\warta\backend\views\layouts\login.php(9): yii\web\AssetBundle::register(Object(yii\web\View))
+#12 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp1\\htdoc...')
+#13 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp1\\htdoc...', Array)
+#14 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(399): yii\base\View->renderFile('C:\\xampp1\\htdoc...', Array, Object(backend\controllers\SiteController))
+#15 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(385): yii\base\Controller->renderContent('<div class="sit...')
+#16 C:\xampp1\htdocs\warta\backend\controllers\SiteController.php(85): yii\base\Controller->render('login', Array)
+#17 [internal function]: backend\controllers\SiteController->actionLogin()
+#18 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#19 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#20 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#21 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#22 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 C:\xampp1\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#24 {main}
+2019-05-24 05:09:48 [::1][-][je5dh2ifo2hg16vn0qeheau847][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-backend' => 'ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"3Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw\",2592000]\";}'
+    'advanced-frontend' => 'v82stmikuo6tiu8ggkpudgaj87'
+    '_csrf-frontend' => 'f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"alWC_oJx45-pE3y45M_Ap6LMmXP_dioa\";}'
+    'advanced-backend' => 'je5dh2ifo2hg16vn0qeheau847'
+    '_csrf-backend' => '4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/warta/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_identity-backend=ff9f43283c19e830aa61d3a7fd54942cb47fc7086050abd01997717fa8ca2025a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%223Xf5X7V3VLR0HJbtVuqfNcVxWGHcSxUw%22%2C2592000%5D%22%3B%7D; advanced-frontend=v82stmikuo6tiu8ggkpudgaj87; _csrf-frontend=f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22alWC_oJx45-pE3y45M_Ap6LMmXP_dioa%22%3B%7D; advanced-backend=je5dh2ifo2hg16vn0qeheau847; _csrf-backend=4c1e4b55cbb28c86ce0630137fecfbd2063d94bc7fdc00c04376f6d3a74f44f0a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22MUs4Fzx7MklM4gAIcIiLSPSKvdyCyOEA%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\ProgramData\\chocolatey\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp1\\php;C:\\Program Files\\Git\\cmd;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Lenovo\\AppData\\Local\\atom\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;\"C:\\instantclient_11_2;\";C:\\Program Files\\Java\\jdk-10.0.2\\bin;C:\\Program Files\\Java\\jdk1.8.0_77\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Lenovo\\AppData\\Local\\.meteor;C:\\Users\\Lenovo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Lenovo\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp1/htdocs/warta/backend/web/index.php'
+    'REMOTE_PORT' => '63533'
+    'REDIRECT_URL' => '/warta/backend/web/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/warta/backend/web/site/login'
+    'SCRIPT_NAME' => '/warta/backend/web/index.php'
+    'PHP_SELF' => '/warta/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558667388.388
+    'REQUEST_TIME' => 1558667388
+>>>>>>> 242386c93d767ae7c1731cc2281fe78288683ca5
     'REQUEST_URI' => '/warta/backend/web/post/create'
     'SCRIPT_NAME' => '/warta/backend/web/index.php'
     'PHP_SELF' => '/warta/backend/web/index.php'
@@ -1888,4 +2656,97 @@ $_SERVER = [
     'PHP_SELF' => '/advanced/backend/web/index.php'
     'REQUEST_TIME_FLOAT' => 1558702476.652
     'REQUEST_TIME' => 1558702476
+]
+2019-05-24 05:16:20 [::1][3][kg0l8toer4hbc1lul7ud8p9s57][error][Error] Error: Class 'dosamigos\ckeditor\CKEditor' not found in C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\widgets\ActiveField.php:782
+Stack trace:
+#0 C:\xampp1\htdocs\warta\backend\views\post\_form.php(21): yii\widgets\ActiveField->widget('dosamigos\\ckedi...', Array)
+#1 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp1\\htdoc...')
+#2 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp1\\htdoc...', Array)
+#3 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp1\\htdoc...', Array, NULL)
+#4 C:\xampp1\htdocs\warta\backend\views\post\create.php(17): yii\base\View->render('_form', Array)
+#5 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(348): require('C:\\xampp1\\htdoc...')
+#6 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\xampp1\\htdoc...', Array)
+#7 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\xampp1\\htdoc...', Array, Object(backend\controllers\PostController))
+#8 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('create', Array, Object(backend\controllers\PostController))
+#9 C:\xampp1\htdocs\warta\backend\controllers\PostController.php(87): yii\base\Controller->render('create', Array)
+#10 [internal function]: backend\controllers\PostController->actionCreate()
+#11 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#12 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#14 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('post/create', Array)
+#15 C:\xampp1\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\xampp1\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#17 {main}
+2019-05-24 05:16:19 [::1][3][kg0l8toer4hbc1lul7ud8p9s57][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'v82stmikuo6tiu8ggkpudgaj87'
+    '_csrf-frontend' => 'f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"alWC_oJx45-pE3y45M_Ap6LMmXP_dioa\";}'
+    'advanced-backend' => 'kg0l8toer4hbc1lul7ud8p9s57'
+    '_identity-backend' => 'fe4a413bf079d198e2843361218c1feaad747b7a5d99aec9cf312d26f839e5f9a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[3,\"pFieG-cbvsxbonyIhzr449CmBuv8SlU8\",2592000]\";}'
+    '_csrf-backend' => '40e362e476d17ce6ab7649d52aec4f01c904a93ecc603ac766d9990cb2f1721fa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"q9BH5j22nkhvpV1e2_9NPby7Q-FmSclW\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/warta/backend/web/'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp1/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp1/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_REFERER' => 'http://localhost/warta/backend/web/post'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'advanced-frontend=v82stmikuo6tiu8ggkpudgaj87; _csrf-frontend=f50c26cdfb1322ae4b23e2185cf76bc047c7439717d39d52343fc23a01e2c7a4a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22alWC_oJx45-pE3y45M_Ap6LMmXP_dioa%22%3B%7D; advanced-backend=kg0l8toer4hbc1lul7ud8p9s57; _identity-backend=fe4a413bf079d198e2843361218c1feaad747b7a5d99aec9cf312d26f839e5f9a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22pFieG-cbvsxbonyIhzr449CmBuv8SlU8%22%2C2592000%5D%22%3B%7D; _csrf-backend=40e362e476d17ce6ab7649d52aec4f01c904a93ecc603ac766d9990cb2f1721fa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22q9BH5j22nkhvpV1e2_9NPby7Q-FmSclW%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Intel\\Shared Files\\cpp\\bin\\Intel64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\PuTTY\\;C:\\ProgramData\\chocolatey\\bin;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\xampp1\\php;C:\\Program Files\\Git\\cmd;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Lenovo\\AppData\\Local\\atom\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Microsoft\\WindowsApps;\"C:\\instantclient_11_2;\";C:\\Program Files\\Java\\jdk-10.0.2\\bin;C:\\Program Files\\Java\\jdk1.8.0_77\\bin;C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Lenovo\\AppData\\Local\\.meteor;C:\\Users\\Lenovo\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\Lenovo\\AppData\\Local\\GitHubDesktop\\bin'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2h PHP/7.0.13'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp1/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp1/htdocs/warta/backend/web/index.php'
+    'REMOTE_PORT' => '63697'
+    'REDIRECT_URL' => '/warta/backend/web/post/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/warta/backend/web/post/create'
+    'SCRIPT_NAME' => '/warta/backend/web/index.php'
+    'PHP_SELF' => '/warta/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558667779.874
+    'REQUEST_TIME' => 1558667779
 ]
