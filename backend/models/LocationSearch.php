@@ -4,12 +4,12 @@ namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Post;
+use backend\models\Location;
 
 /**
- * PostSearch represents the model behind the search form of `backend\models\Post`.
+ * LocationSearch represents the model behind the search form of `backend\models\Location`.
  */
-class PostSearch extends Post
+class LocationSearch extends Location
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class PostSearch extends Post
     public function rules()
     {
         return [
-            [['id_post', 'id_user', 'created_at', 'updated_at', 'status', 'id_category', 'id_location'], 'integer'],
-            [['title', 'content', 'image'], 'safe'],
+            [['id_location'], 'integer'],
+            [['city', 'region'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class PostSearch extends Post
      */
     public function search($params)
     {
-        $query = Post::find();
+        $query = Location::find();
 
         // add conditions that should always apply here
 
@@ -58,18 +58,11 @@ class PostSearch extends Post
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id_post' => $this->id_post,
-            'id_user' => $this->id_user,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
-            'status' => $this->status,
-            'id_category' => $this->id_category,
             'id_location' => $this->id_location,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'content', $this->content])
-            ->andFilterWhere(['like', 'image', $this->image]);
+        $query->andFilterWhere(['like', 'city', $this->city])
+            ->andFilterWhere(['like', 'region', $this->region]);
 
         return $dataProvider;
     }
