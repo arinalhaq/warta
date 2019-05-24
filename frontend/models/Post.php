@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "post".
  *
  * @property int $id_post
- * @property int $created_by
+ * @property int $id_user
  * @property string $title
  * @property string $content
  * @property int $created_at
@@ -16,11 +16,12 @@ use Yii;
  * @property int $status
  * @property int $id_category
  * @property int $id_location
- * @property int $updated_by
+ * @property string $image
  *
  * @property News[] $news
  * @property Location $location
  * @property Category $category
+ * @property User $user
  */
 class Post extends \yii\db\ActiveRecord
 {
@@ -38,12 +39,13 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['created_by', 'title', 'content', 'created_at', 'updated_at', 'status', 'id_category', 'id_location'], 'required'],
-            [['created_by', 'created_at', 'updated_at', 'status', 'id_category', 'id_location', 'updated_by'], 'integer'],
+            [['id_user', 'title', 'content', 'created_at', 'updated_at', 'status', 'id_category', 'id_location', 'image'], 'required'],
+            [['id_user', 'created_at', 'updated_at', 'status', 'id_category', 'id_location'], 'integer'],
             [['content'], 'string'],
-            [['title'], 'string', 'max' => 255],
+            [['title', 'image'], 'string', 'max' => 255],
             [['id_location'], 'exist', 'skipOnError' => true, 'targetClass' => Location::className(), 'targetAttribute' => ['id_location' => 'id_location']],
             [['id_category'], 'exist', 'skipOnError' => true, 'targetClass' => Category::className(), 'targetAttribute' => ['id_category' => 'id_category']],
+            [['id_user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id_user' => 'id']],
         ];
     }
 
@@ -54,7 +56,7 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             'id_post' => 'Id Post',
-            'created_by' => 'Created By',
+            'id_user' => 'Id User',
             'title' => 'Title',
             'content' => 'Content',
             'created_at' => 'Created At',
@@ -62,7 +64,7 @@ class Post extends \yii\db\ActiveRecord
             'status' => 'Status',
             'id_category' => 'Id Category',
             'id_location' => 'Id Location',
-            'updated_by' => 'Updated By',
+            'image' => 'Image',
         ];
     }
 
@@ -88,5 +90,13 @@ class Post extends \yii\db\ActiveRecord
     public function getCategory()
     {
         return $this->hasOne(Category::className(), ['id_category' => 'id_category']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUser()
+    {
+        return $this->hasOne(User::className(), ['id' => 'id_user']);
     }
 }
