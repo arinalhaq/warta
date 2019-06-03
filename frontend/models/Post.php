@@ -3,6 +3,7 @@
 namespace frontend\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "post".
@@ -25,6 +26,7 @@ use Yii;
  */
 class Post extends \yii\db\ActiveRecord
 {
+    public $file;
     /**
      * {@inheritdoc}
      */
@@ -65,6 +67,15 @@ class Post extends \yii\db\ActiveRecord
             'id_category' => 'Id Category',
             'id_location' => 'Id Location',
             'image' => 'Image',
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+            ],
         ];
     }
 

@@ -114,9 +114,7 @@ class PostController extends Controller
         $path = 'F:/xampp2/htdocs/advanced/common/assets/upload/';
 
         if ($model->load(Yii::$app->request->post())) {
-            $model->status = 1;
 
-            $model->id_editor = Yii::$app->user->id;
             $model->file = UploadedFile::getInstance($model, 'file');
 
             $model->file->saveAs($path . $model->file->baseName . '.' . $model->file->extension);

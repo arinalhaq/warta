@@ -3,6 +3,9 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\ckeditor\CKEditor;
+use backend\models\Category;
+use backend\models\Location;
+use yii\helpers\ArrayHelper;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Post */
 /* @var $form yii\widgets\ActiveForm */
@@ -25,17 +28,17 @@ use dosamigos\ckeditor\CKEditor;
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
 
-    <!-- <?= $form->field($model, 'content')->textArea(['maxlength' => true]) ?> -->
-    <textarea id="post-content" class="form-control" name="Post[content]">
+    <?= $form->field($model, 'content')->textarea(['maxlength' => true]) ?>
+    <!-- <textarea id="post-content" class="form-control" name="Post[content]">
 
-    </textarea>
+    </textarea> -->
 
 
-    <?= $form->field($model, 'status')->textInput() ?>
+    <?= $form->field($model, 'status')->checkBox(['label' => 'status', 'uncheck' => null, 'checked' => 'checked']);  ?>
 
-    <?= $form->field($model, 'id_category')->textInput() ?>
+    <?= $form->field($model, 'id_category')->dropDownList(ArrayHelper::map(Category::find()->asArray()->all(), 'id_category', 'category')) ?>
 
-    <?= $form->field($model, 'id_location')->textInput() ?>
+    <?= $form->field($model, 'id_location')->dropDownList(ArrayHelper::map(Location::find()->asArray()->all(), 'id_location', 'city'))  ?>
 
     <?= $form->field($model, 'file')->fileInput() ?>
 

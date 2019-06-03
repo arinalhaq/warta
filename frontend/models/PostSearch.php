@@ -21,6 +21,7 @@ class PostSearch extends Post
         return [
             [['id_post', 'id_user', 'created_at', 'updated_at', 'status', 'id_category', 'id_location'], 'integer'],
             [['title', 'content', 'image'], 'safe'],
+            [['category'], 'safe'],
         ];
     }
 

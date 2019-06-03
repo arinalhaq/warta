@@ -84,6 +84,7 @@ class PostController extends Controller
         $path = 'F:/xampp2/htdocs/advanced/common/assets/upload/';
 
         if ($model->load(Yii::$app->request->post())) {
+            $model->status = 0;
             $model->id_user = Yii::$app->user->id;
             $model->file = UploadedFile::getInstance($model, 'file');
 
@@ -119,7 +120,7 @@ class PostController extends Controller
             $model->file = UploadedFile::getInstance($model, 'file');
 
             if ($model->file == null) {
-                $model->image = $model->findOne($model->id_user)->image;
+                $model->image = $model->findOne($model->id_post)->image;
             } else {
                 $model->file->saveAs($path . $model->file->baseName . '.' . $model->file->extension);
 
