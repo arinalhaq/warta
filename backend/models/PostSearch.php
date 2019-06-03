@@ -14,11 +14,14 @@ class PostSearch extends Post
     /**
      * {@inheritdoc}
      */
+    public $category;
+    
     public function rules()
     {
         return [
             [['id_post', 'id_user', 'created_at', 'updated_at', 'status', 'id_category', 'id_location'], 'integer'],
             [['title', 'content', 'image'], 'safe'],
+            [['category'], 'safe'],
         ];
     }
 
@@ -41,12 +44,21 @@ class PostSearch extends Post
     public function search($params)
     {
         $query = Post::find();
+        $query->joinWith(['category']);
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+
+        $dataProvider->sort->attributes['category'] = [
+            // The tables are the ones our relation are configured to
+            // in my case they are prefixed with "tbl_"
+            'asc' => ['category.category' => SORT_ASC],
+            'desc' => ['category.category' => SORT_DESC],
+        ];
+        // Lets do the same with country now
 
         $this->load($params);
 
@@ -69,7 +81,8 @@ class PostSearch extends Post
 
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'content', $this->content])
-            ->andFilterWhere(['like', 'image', $this->image]);
+            ->andFilterWhere(['like', 'image', $this->image])
+            ->andFilterWhere(['like', 'category.category', $this->category]);
 
         return $dataProvider;
     }

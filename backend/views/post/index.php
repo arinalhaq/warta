@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use backend\models\Category;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\PostSearch */
@@ -15,9 +16,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
+    <!-- <p>
         <?= Html::a('Create Post', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    </p> -->
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -28,11 +29,15 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_post',
             'id_user',
             'title',
-            'content:ntext',
-            'created_at',
+            // 'content:ntext',
+            'created_at:datetime',
             //'updated_at',
-            //'status',
-            //'id_category',
+            'status',
+            [
+                'attribute'=>'category',
+                'value'=>'category.category',
+            ],
+            
             //'id_location',
             //'image',
 

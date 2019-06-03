@@ -5,11 +5,13 @@ namespace backend\controllers;
 use Yii;
 use backend\models\Post;
 use backend\models\PostSearch;
+use backend\models\MyPostSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use backend\models\News;
 use yii\web\UploadedFile;
+use yii\filters\AccessControl;
 
 /**
  * PostController implements the CRUD actions for Post model.
@@ -28,6 +30,16 @@ class PostController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index', 'create', 'update', 'delete', 'view', 'my-post'],
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
         ];
     }
 
@@ -37,13 +49,13 @@ class PostController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new PostSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+            $searchModel = new PostSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+ 
+            return $this->render('index', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
     }
 
     /**
@@ -99,8 +111,19 @@ class PostController extends Controller
     {
         $model = $this->findModel($id);
 
+        $path = 'F:/xampp2/htdocs/advanced/common/assets/upload/';
+
         if ($model->load(Yii::$app->request->post())) {
             $model->status = 1;
+
+            $model->id_editor = Yii::$app->user->id;
+            $model->file = UploadedFile::getInstance($model, 'file');
+
+            $model->file->saveAs($path . $model->file->baseName . '.' . $model->file->extension);
+
+            $model->image = 'http://localhost/advanced/common/assets/upload/' . $model->file->baseName . '.' . $model->file->extension;
+            $model->file = null;
+
             $model->save();
             $news = new News();
             $news->id_post = $id;
@@ -143,5 +166,16 @@ class PostController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    public function actionMyPost()
+    {
+            $searchModel = new MyPostSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+ 
+            return $this->render('index', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
     }
 }

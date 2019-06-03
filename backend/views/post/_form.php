@@ -8,21 +8,28 @@ use dosamigos\ckeditor\CKEditor;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
+<!-- <?php  
+  $baseUrl = Yii::$app->request->baseUrl; 
+  
+  $this->registerJsFile('@web/js/ckeditor.js');
+  $this->registerCssFile('@web/css/component.css');
+  $this->registerCssFile('@web/css/normalize.css');
+?> -->
+
 <div class="post-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    
+
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    
-    <?= $form->field($model, 'content')->widget(CKEditor::class, [
-        'options' => ['rows' => 6],
-        'preset' => 'basic'
-    ])?>
-    
-    
+
+    <!-- <?= $form->field($model, 'content')->textArea(['maxlength' => true]) ?> -->
+    <textarea id="post-content" class="form-control" name="Post[content]">
+
+    </textarea>
+
 
     <?= $form->field($model, 'status')->textInput() ?>
 
@@ -39,3 +46,16 @@ use dosamigos\ckeditor\CKEditor;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/12.0.0/classic/ckeditor.js"></script>
+
+<script>
+    ClassicEditor
+    .create( document.querySelector( '#post-content' ) )
+    .then( editor => {
+        console.log( editor );
+    } )
+    .catch( error => {
+        console.error( error );
+    } );
+</script>

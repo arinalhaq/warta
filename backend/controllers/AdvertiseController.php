@@ -26,6 +26,16 @@ class AdvertiseController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'actions' => ['index', 'create', 'update', 'delete', 'view'],
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
         ];
     }
 

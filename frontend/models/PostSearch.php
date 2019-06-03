@@ -41,13 +41,22 @@ class PostSearch extends Post
      */
     public function search($params)
     {
-        $query = Post::find()->where(['id_user' => Yii::$app->user->id]);
+        $query = Post::find()->joinWith('user')->where(['user.username' => Yii::$app->user->identity->username]);
+        $query->joinWith(['category']);
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+
+        $dataProvider->sort->attributes['category'] = [
+            // The tables are the ones our relation are configured to
+            // in my case they are prefixed with "tbl_"
+            'asc' => ['category.category' => SORT_ASC],
+            'desc' => ['category.category' => SORT_DESC],
+        ];
+        // Lets do the same with country now
 
         $this->load($params);
 
@@ -70,7 +79,8 @@ class PostSearch extends Post
 
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'content', $this->content])
-            ->andFilterWhere(['like', 'image', $this->image]);
+            ->andFilterWhere(['like', 'image', $this->image])
+            ->andFilterWhere(['like', 'category.category', $this->category]);
 
         return $dataProvider;
     }

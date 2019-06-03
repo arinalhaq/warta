@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use backend\models\Category;
+use backend\models\Location;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Post */
@@ -32,14 +34,28 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_post',
             'id_user',
             'title',
-            'content:ntext',
-            'created_at',
-            'updated_at',
+            // 'content:ntext',
+            'created_at:datetime',
+            'updated_at:datetime',
             'status',
-            'id_category',
-            'id_location',
+            [
+                'attribute'=>'category',
+                'value'=>Category::findOne($model->id_category)->category,
+            ],
+            [
+                'attribute'=>'location',
+                'value'=>Location::findOne($model->id_location)->city,
+            ],
+            // 'id_location',
             'image',
         ],
     ]) ?>
 
+
+
 </div>
+
+<div id="content">
+    <?php echo $model->content ?>
+</div>
+
