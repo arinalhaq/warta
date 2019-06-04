@@ -23,17 +23,10 @@ use yii\helpers\ArrayHelper;
 
     <?php $form = ActiveForm::begin(); ?>
 
-
-
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-
     <?= $form->field($model, 'content')->textarea(['maxlength' => true]) ?>
-    <!-- <textarea id="post-content" class="form-control" name="Post[content]">
-
-    </textarea> -->
-
-
+  
     <?= $form->field($model, 'status')->checkBox(['label' => 'status', 'uncheck' => null, 'checked' => 'checked']);  ?>
 
     <?= $form->field($model, 'id_category')->dropDownList(ArrayHelper::map(Category::find()->asArray()->all(), 'id_category', 'category')) ?>

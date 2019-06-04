@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 use backend\models\Category;
 use backend\models\Location;
+use backend\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Post */
@@ -28,25 +29,31 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <?= Html::a('Approve', ['approve', 'id' => $model->id_post], [
-            'class' => 'btn btn-info',
-            'data' => [
-                'confirm' => 'Are you sure you want to approve this item?',
-                'method' => 'post',
-            ],
-        ]) ?>
     </p>
+
+    <?php if($model->status == 1){
+        $status = 'published';
+    } else {
+        $status = 'unpublished';
+    }
+    ?>
 
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             'id_post',
-            'id_user',
+            [
+                'attribute' => 'user',
+                'value' => User::findOne($model->id_user)->username,
+            ],
             'title',
-            'content:ntext',
+            // 'content:ntext',
             'created_at:datetime',
             'updated_at:datetime',
-            'status',
+            [
+                'attribute' => 'status',
+                'value' => $status,
+            ],
             [
                 'attribute' => 'category',
                 'value' => Category::findOne($model->id_category)->category,

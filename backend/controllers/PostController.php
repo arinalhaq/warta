@@ -35,7 +35,7 @@ class PostController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'create', 'update', 'delete', 'view', 'my-post'],
+                        'actions' => ['index', 'create', 'update', 'delete', 'view', 'my-post', 'publish'],
                         'roles' => ['@'],
                     ],
                 ],
@@ -49,13 +49,13 @@ class PostController extends Controller
      */
     public function actionIndex()
     {
-            $searchModel = new PostSearch();
-            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
- 
-            return $this->render('index', [
-                'searchModel' => $searchModel,
-                'dataProvider' => $dataProvider,
-            ]);
+        $searchModel = new PostSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
     /**
@@ -117,10 +117,14 @@ class PostController extends Controller
 
             $model->file = UploadedFile::getInstance($model, 'file');
 
-            $model->file->saveAs($path . $model->file->baseName . '.' . $model->file->extension);
+            if ($model->file == null) {
+                $model->image = $model->findOne($model->id_post)->image;
+            } else {
+                $model->file->saveAs($path . $model->file->baseName . '.' . $model->file->extension);
 
-            $model->image = 'http://localhost/advanced/common/assets/upload/' . $model->file->baseName . '.' . $model->file->extension;
-            $model->file = null;
+                $model->image = 'http://localhost/advanced/common/assets/upload/' . $model->file->baseName . '.' . $model->file->extension;
+                $model->file = null;
+            }
 
             $model->save();
             $news = new News();
@@ -145,6 +149,10 @@ class PostController extends Controller
      */
     public function actionDelete($id)
     {
+        if($news = News::findOne(['id_post' => $id]) !== null){
+            $news->delete();
+        }
+        
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -168,12 +176,25 @@ class PostController extends Controller
 
     public function actionMyPost()
     {
-            $searchModel = new MyPostSearch();
-            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
- 
-            return $this->render('index', [
-                'searchModel' => $searchModel,
-                'dataProvider' => $dataProvider,
-            ]);
+        $searchModel = new MyPostSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionPublish($id)
+    {
+        $model = $this->findModel($id);
+        $model->status = 1;
+        $model->save();
+        $news = new News();
+        $news->id_post = $id;
+        $news->status_news = 1;
+        $news->date = date('d-m-Y');
+        $news->save();
+        return $this->redirect(['view', 'id' => $model->id_post]);
     }
 }
