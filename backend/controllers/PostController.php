@@ -12,6 +12,7 @@ use yii\filters\VerbFilter;
 use backend\models\News;
 use yii\web\UploadedFile;
 use yii\filters\AccessControl;
+use yii\helpers\Url;
 
 /**
  * PostController implements the CRUD actions for Post model.
@@ -80,7 +81,7 @@ class PostController extends Controller
     {
         $model = new Post();
 
-        $path = 'F:/xampp2/htdocs/advanced/common/assets/upload/';
+        $path = Url::to('@common/assets/upload/');
 
         if ($model->load(Yii::$app->request->post())) {
             $model->id_user = Yii::$app->user->id;
@@ -111,7 +112,7 @@ class PostController extends Controller
     {
         $model = $this->findModel($id);
 
-        $path = 'F:/xampp2/htdocs/advanced/common/assets/upload/';
+        $path = Url::to('@common/assets/upload/');
 
         if ($model->load(Yii::$app->request->post())) {
 

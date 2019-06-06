@@ -26,8 +26,6 @@ use yii\helpers\ArrayHelper;
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'content')->textarea(['maxlength' => true]) ?>
-  
-    <?= $form->field($model, 'status')->checkBox(['label' => 'status', 'uncheck' => null, 'checked' => 'checked']);  ?>
 
     <?= $form->field($model, 'id_category')->dropDownList(ArrayHelper::map(Category::find()->asArray()->all(), 'id_category', 'category')) ?>
 
