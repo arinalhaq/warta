@@ -1,5 +1,10 @@
 <?php
 use yii\helpers\Url;
+use frontend\models\Category;
+use backend\models\CategorySearch;
+
+$category = new CategorySearch();
+$dataProvider = $category->search(Yii::$app->request->queryParams)->query->all();
 ?>
 
 <header class="nav">
@@ -29,29 +34,28 @@ use yii\helpers\Url;
               <a href="<?= Url::toRoute('news'); ?>">News</a>
               <ul class="nav__dropdown-menu">
                 <li>
-                  <a href=>Post</a>
+                  <a href="">Recent News</a>
                 </li>
                 <li>
-                  <a href="index-3.html">News</a>
+                  <a href="">Most Popular</a>
                 </li>
                 <li>
-                  <a href="index-4.html">Category</a>
+                  <a href="">Most Liked</a>
                 </li>
               </ul>
             </li>
 
             <li class="nav__dropdown">
-              <a href="categories.html">Posts</a>
+              <a href="categories.html">Category</a>
               <ul class="nav__dropdown-menu">
-                <li><a href="single-post.html">Gallery Post</a></li>
-                <li><a href="single-post.html">Video Post</a></li>
-                <li><a href="single-post.html">Audio Post</a></li>
-                <li><a href="single-post.html">Quote Post</a></li>
+              <?php foreach($dataProvider as $data): ?>
+                <li><a href="single-post.html"><?= $data->category?></a></li>
+                <?php endforeach ?>
               </ul>
             </li>
 
             <li class="nav__dropdown">
-              <a href="catalog.html">Pages</a>
+              <a href="catalog.html">Local News</a>
               <ul class="nav__dropdown-menu">
                 <li><a href="categories.html">Categories</a></li>
                 <li><a href="about.html">About</a></li>
@@ -62,11 +66,7 @@ use yii\helpers\Url;
 
             <?php if (!Yii::$app->user->isGuest) {
              echo '<li class="nav__dropdown">
-              <a href="'.Url::to(['post/my-post']).'">My Post</a>
-              <ul class="nav__dropdown-menu">
-                <li><a href="lazyload.html">Lazy Load</a></li>
-                <li><a href="shortcodes.html">Shortcodes</a></li>
-              </ul>
+              <a href="'.Url::to(['post/index']).'">My Post</a>
             </li>';
             } else {
 

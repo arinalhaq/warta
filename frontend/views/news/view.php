@@ -77,7 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
               <div class="single-post__entry-header  entry__header">
                 
                 <h1 class="single-post__entry-title">
-                  <?php echo $post->title; ?>
+                  <?= $post->title; ?>
                 </h1>
                 
                 <ul class="single-post__entry-meta entry__meta">
@@ -91,11 +91,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                   </li>
                   <li class="entry__meta-date">
-                    <?php echo Yii::$app->formatter->asDate($post->created_at); ?>
+                    <?= Yii::$app->formatter->asDate($post->created_at); ?>
                   </li>
                   <li>
                     <span>in</span>
-                    <a href="<?php echo Url::to(['category/view/','id'=> $post->id_category]); ?>" class="entry__meta-category"><?= $post->category->category; ?></a>
+                    <a href="<?= Url::to(['category/view/','id'=> $post->id_category]); ?>" class="entry__meta-category"><?= $post->category->category; ?></a>
                   </li>
                 </ul>
               </div>
@@ -126,77 +126,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
                   <!-- tags -->
                   <div class="entry__tags">
-                    Tags: <a href="#" rel="tag">mobile</a><a href="#" rel="tag">gadgets</a><a href="#" rel="tag">satelite</a>
+                   
                   </div> <!-- end tags -->
 
                 </div> <!-- end entry article -->
               </div>
 
-              <!-- Newsletter -->
-              <div class="newsletter-wide widget widget_mc4wp_form_widget">
-                <div class="newsletter-wide__text">
-                  <h4 class="widget-title">Subscribe for Neotech news and receive daily updates</h4>
-                </div>
-
-                <div class="newsletter-wide__form">
-                  <form class="mc4wp-form" method="post">
-                    <div class="mc4wp-form-fields">
-                      <i class="mc4wp-form-icon ui-email"></i>
-                      <input type="email" name="EMAIL" placeholder="Your email" required="">
-                      <input type="submit" class="btn btn-md btn-color" value="Subscribe">
-                    </div>
-                  </form>
-                </div>
-              </div>
-
-              <!-- Related Posts -->
-              <div class="related-posts">
-                <h5 class="related-posts__title">You might like</h5>
-                <div class="row row-20">
-                  <div class="col-md-4">
-                    <article class="related-posts__entry entry">
-                      <a href="single-post.html">
-                        <div class="thumb-container">
-                          <img src="img/blog/grid_post_img_3.jpg" data-src="img/blog/grid_post_img_3.jpg" alt="" class="entry__img lazyload">
-                        </div>
-                      </a>
-                      <div class="related-posts__text-holder">   
-                        <h2 class="related-posts__entry-title">
-                          <a href="single-post.html">VR and playable on a console makes it a great option to PC related VR headsets</a>
-                        </h2>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-4">
-                    <article class="related-posts__entry entry">
-                      <a href="single-post.html">
-                        <div class="thumb-container">
-                          <img src="img/blog/grid_post_img_4.jpg" data-src="img/blog/grid_post_img_4.jpg" alt="" class="entry__img lazyload">
-                        </div>
-                      </a>
-                      <div class="related-posts__text-holder">   
-                        <h2 class="related-posts__entry-title">
-                          <a href="single-post.html">NASA is best known for building rockets and spacecraft</a>
-                        </h2>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="col-md-4">
-                    <article class="related-posts__entry entry">
-                      <a href="single-post.html">
-                        <div class="thumb-container">
-                          <img src="img/blog/grid_post_img_5.jpg" data-src="img/blog/grid_post_img_5.jpg" alt="" class="entry__img lazyload">
-                        </div>
-                      </a>
-                      <div class="related-posts__text-holder">   
-                        <h2 class="related-posts__entry-title">
-                          <a href="single-post.html">Digital cameras are always changing, adding new features</a>
-                        </h2>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div> <!-- end related posts -->                
+              <!-- Newsletter -->                
 
             </article> <!-- end standard post -->
 
