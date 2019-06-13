@@ -5,9 +5,12 @@ namespace frontend\controllers;
 use Yii;
 use frontend\models\Category;
 use frontend\models\CategorySearch;
+use frontend\models\Post;
+use frontend\models\News;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\data\ActiveDataProvider;
 
 /**
  * CategoryController implements the CRUD actions for Category model.
@@ -53,9 +56,12 @@ class CategoryController extends Controller
     public function actionView($id)
     {
         $post = new Post();
-        $dataProvider = Post::find()->where(['id_category' => $post->id_category])->query->all();
+        $query = Post::find()->where(['id_category' => $id]);
+        $query2 = News::find()->joinWith('post')->where(['post.id_category' => $id])->orderBy(['post.created_at' => SORT_DESC]);
+        $dataProvider = new ActiveDataProvider(['query' => $query2]);
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'dataProvider' => $dataProvider->query->all(),
         ]);
     }
 

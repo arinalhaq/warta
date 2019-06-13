@@ -49,7 +49,7 @@ $dataProvider = $category->search(Yii::$app->request->queryParams)->query->all()
               <a href="categories.html">Category</a>
               <ul class="nav__dropdown-menu">
               <?php foreach($dataProvider as $data): ?>
-                <li><a href="single-post.html"><?= $data->category?></a></li>
+                <li><a href="<?= Url::to(['category/view', 'id' => $data->id_category]) ?>"><?= $data->category?></a></li>
                 <?php endforeach ?>
               </ul>
             </li>

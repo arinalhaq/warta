@@ -17,7 +17,8 @@ class KomentarSearch extends Komentar
     public function rules()
     {
         return [
-            [['id_comment', 'content', 'created_at', 'updated_at', 'created_by', 'updated_by', 'id_news'], 'integer'],
+            [['id_comment', 'created_at', 'updated_at', 'created_by', 'updated_by', 'id_news'], 'integer'],
+            [['content'], 'safe'],
         ];
     }
 
@@ -58,13 +59,14 @@ class KomentarSearch extends Komentar
         // grid filtering conditions
         $query->andFilterWhere([
             'id_comment' => $this->id_comment,
-            'content' => $this->content,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             'created_by' => $this->created_by,
             'updated_by' => $this->updated_by,
             'id_news' => $this->id_news,
         ]);
+
+        $query->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }
