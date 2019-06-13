@@ -1,9 +1,13 @@
 <?php
 
+
+use app\models\News;
+use app\controllers\NewsController;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\DetailView;
 use yii\widgets\ActiveForm;
+use dosamigos\disqus\Comments;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\News */
@@ -126,9 +130,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
                   <!-- tags -->
                   <div class="entry__tags">
-                   
+                  <?php 
+                    echo Html::a('Like');
+                    echo Html::a('Dislike');
+                  ?> 
                   </div> <!-- end tags -->
-
+                  
                 </div> <!-- end entry article -->
               </div>
 
@@ -140,61 +147,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <!-- Comments -->
             <div class="entry-comments mt-30">
-              <h5 class="entry-comments__title">3 comments</h5>
-
-              <ul class="comment-list">
-                <li class="comment">  
-                  <div class="comment-body">
-                    <div class="comment-avatar">
-                      <img alt="" src="img/blog/comment_1.png">
-                    </div>
-                    <div class="comment-text">
-                      <h6 class="comment-author">Joeby Ragpa</h6>
-                      <div class="comment-metadata">
-                        <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>
-                      </div>                      
-                      <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
-                      <a href="#" class="comment-reply">Reply</a>
-                    </div>
-                  </div>
-
-                  <ul class="children">
-                    <li class="comment">
-                      <div class="comment-body">
-                        <div class="comment-avatar">
-                          <img alt="" src="img/blog/comment_2.png">
-                        </div>
-                        <div class="comment-text">
-                          <h6 class="comment-author">Alexander Samokhin</h6>
-                          <div class="comment-metadata">
-                            <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>  
-                          </div>                      
-                          <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
-                          <a href="#" class="comment-reply">Reply</a>
-                        </div>
-                      </div>
-                    </li> <!-- end reply comment -->
-                  </ul>
-
-                </li> <!-- end 1-2 comment -->
-
-                <li>
-                  <div class="comment-body">
-                    <div class="comment-avatar">
-                      <img alt="" src="img/blog/comment_3.png">
-                    </div>
-                    <div class="comment-text">
-                      <h6 class="comment-author">Chris Root</h6>
-                      <div class="comment-metadata">
-                        <a href="#" class="comment-date">July 17, 2017 at 12:48 pm</a>  
-                      </div>                      
-                      <p>This template is so awesome. I didn’t expect so many features inside. E-commerce pages are very useful, you can launch your online store in few seconds. I will rate 5 stars.</p>
-                      <a href="#" class="comment-reply">Reply</a>
-                    </div>
-                  </div>
-                </li> <!-- end 3 comment -->
-
-              </ul>         
+            <?php 
+              echo Comments::widget([
+                // see http://help.disqus.com/customer/portal/articles/472098-javascript-configuration-variables
+                'shortname' => 'warta',
+                'identifier' => 'article_identifier'
+              ]);   
+            ?>      
             </div> <!-- end comments -->
 
 
