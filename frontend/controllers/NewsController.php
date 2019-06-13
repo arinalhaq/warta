@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use Yii;
 use frontend\models\News;
 use frontend\models\NewsSearch;
+use frontend\models\Komentar;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -52,8 +53,16 @@ class NewsController extends Controller
      */
     public function actionView($id)
     {
+        $komentar = new Komentar();
+        $model = $this->findModel($id);
+
+        if ($komentar->load(Yii::$app->request->post()) && $komentar->save()) {
+            return $this->redirect(['view', 'id' => $id]);
+        }
+
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
+            'komentar' => $komentar,
         ]);
     }
 

@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-backend',
+    'name' => 'warta',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
@@ -46,5 +47,10 @@ return [
         ],
         
     ],
+
+    // 'aliases' => [
+    //     '@adminlte/widgets'=>'@vendor/adminlte/yii2-widgets'
+    //     ],
+        
     'params' => $params,
 ];

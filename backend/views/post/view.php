@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use backend\models\Category;
+use backend\models\Location;
+use backend\models\User;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Post */
@@ -24,22 +27,57 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('Publish', ['publish', 'id' => $model->id_post], [
+            'class' => 'btn btn-info',
+            'data' => [
+                'confirm' => 'Are you sure you want to approve this item?',
+                'method' => 'post',
+            ],
+        ]) ?>
     </p>
+
+    <?php if($model->status == 1){
+        $status = 'published';
+    } else {
+        $status = 'unpublished';
+    }
+    ?>
 
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             'id_post',
-            'id_user',
+            [
+                'attribute'=>'user',
+                'value'=>User::findOne($model->id_user)->username,
+            ],
             'title',
-            'content:ntext',
-            'created_at',
-            'updated_at',
-            'status',
-            'id_category',
-            'id_location',
+            // 'content:ntext',
+            'created_at:datetime',
+            'updated_at:datetime',
+            // 'status',
+            [
+                'attribute' => 'status',
+                'value' => $status,
+            ],
+            [
+                'attribute'=>'category',
+                'value'=>Category::findOne($model->id_category)->category,
+            ],
+            [
+                'attribute'=>'location',
+                'value'=>Location::findOne($model->id_location)->city,
+            ],
+            // 'id_location',
             'image',
         ],
     ]) ?>
 
+
+
 </div>
+
+<div id="content">
+    <?php echo $model->content ?>
+</div>
+

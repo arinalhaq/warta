@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use backend\models\Post;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\News */
@@ -32,11 +33,15 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_news',
             'id_post',
             'status_news',
-            'likes',
-            'views',
+            // 'likes',
+            // 'views',
             'date',
             'id_editor',
         ],
     ]) ?>
 
+</div>
+
+<div>
+    <?php echo Post::findOne($model->id_post)->content ?>
 </div>
