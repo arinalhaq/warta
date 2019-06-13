@@ -52,6 +52,8 @@ class CategoryController extends Controller
      */
     public function actionView($id)
     {
+        $post = new Post();
+        $dataProvider = Post::find()->where(['id_category' => $post->id_category])->query->all();
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
