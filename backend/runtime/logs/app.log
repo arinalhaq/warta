@@ -955,3 +955,175 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1558664918.707
     'REQUEST_TIME' => 1558664918
 ]
+2019-05-24 05:09:56 [::1][1][iuf8vptudqg9uek468jbnt8o4m][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "user". in C:\xampp\htdocs\warta\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\warta\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('user', Array)
+#1 C:\xampp\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\warta\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2019-05-24 05:09:56 [::1][1][iuf8vptudqg9uek468jbnt8o4m][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'style' => 'color2'
+    'Pycharm-c98d4b0' => 'c9ea4e60-edbf-44bb-a162-ef3970ba22aa'
+    'advanced-frontend' => 'urpi0qa1lu7ijb8pvscce2brla'
+    '_csrf-frontend' => '5cb38f28993717a2314cf212ecf58e70be8045db64a051f088b380e3d3c6f07ea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0-0mcd635SU4KV_ng0kV3DLn83Ivmvw-\";}'
+    'advanced-backend' => 'iuf8vptudqg9uek468jbnt8o4m'
+    '_identity-backend' => '4cfd49342fa28b6e1bc87cac165a54b0d1009c3d194580c1311e61b6f81d71eba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"knnOO3ZS_yFJ0TFam7W16YxO5BWe6Dub\",2592000]\";}'
+    '_csrf-backend' => '2bcefb45e5f46f7c150ef170c6791973ccc5e0739207d8868262e220de6e51bda:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4gyWr6zi9emvf2gzltsdkR95B9eZV1X6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/warta/backend/web/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'style=color2; Pycharm-c98d4b0=c9ea4e60-edbf-44bb-a162-ef3970ba22aa; advanced-frontend=urpi0qa1lu7ijb8pvscce2brla; _csrf-frontend=5cb38f28993717a2314cf212ecf58e70be8045db64a051f088b380e3d3c6f07ea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220-0mcd635SU4KV_ng0kV3DLn83Ivmvw-%22%3B%7D; advanced-backend=iuf8vptudqg9uek468jbnt8o4m; _identity-backend=4cfd49342fa28b6e1bc87cac165a54b0d1009c3d194580c1311e61b6f81d71eba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22knnOO3ZS_yFJ0TFam7W16YxO5BWe6Dub%22%2C2592000%5D%22%3B%7D; _csrf-backend=2bcefb45e5f46f7c150ef170c6791973ccc5e0739207d8868262e220de6e51bda%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224gyWr6zi9emvf2gzltsdkR95B9eZV1X6%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\composer;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Bitvise SSH Client;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Java\\jdk1.8.0_77\\bin;C:\\Users\\rizky\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\rizky\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\rizky\\AppData\\Local\\.meteor;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/warta/backend/web/index.php'
+    'REMOTE_PORT' => '53557'
+    'REDIRECT_URL' => '/warta/backend/web/user'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/warta/backend/web/user'
+    'SCRIPT_NAME' => '/warta/backend/web/index.php'
+    'PHP_SELF' => '/warta/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558667396.421
+    'REQUEST_TIME' => 1558667396
+]
+2019-05-24 05:10:02 [::1][1][iuf8vptudqg9uek468jbnt8o4m][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "advertise". in C:\xampp\htdocs\warta\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\xampp\htdocs\warta\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('advertise', Array)
+#1 C:\xampp\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\xampp\htdocs\warta\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\xampp\htdocs\warta\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\warta\backend\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2019-05-24 05:10:02 [::1][1][iuf8vptudqg9uek468jbnt8o4m][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'style' => 'color2'
+    'Pycharm-c98d4b0' => 'c9ea4e60-edbf-44bb-a162-ef3970ba22aa'
+    'advanced-frontend' => 'urpi0qa1lu7ijb8pvscce2brla'
+    '_csrf-frontend' => '5cb38f28993717a2314cf212ecf58e70be8045db64a051f088b380e3d3c6f07ea:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"0-0mcd635SU4KV_ng0kV3DLn83Ivmvw-\";}'
+    'advanced-backend' => 'iuf8vptudqg9uek468jbnt8o4m'
+    '_identity-backend' => '4cfd49342fa28b6e1bc87cac165a54b0d1009c3d194580c1311e61b6f81d71eba:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"knnOO3ZS_yFJ0TFam7W16YxO5BWe6Dub\",2592000]\";}'
+    '_csrf-backend' => '2bcefb45e5f46f7c150ef170c6791973ccc5e0739207d8868262e220de6e51bda:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"4gyWr6zi9emvf2gzltsdkR95B9eZV1X6\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/warta/backend/web/'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'style=color2; Pycharm-c98d4b0=c9ea4e60-edbf-44bb-a162-ef3970ba22aa; advanced-frontend=urpi0qa1lu7ijb8pvscce2brla; _csrf-frontend=5cb38f28993717a2314cf212ecf58e70be8045db64a051f088b380e3d3c6f07ea%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%220-0mcd635SU4KV_ng0kV3DLn83Ivmvw-%22%3B%7D; advanced-backend=iuf8vptudqg9uek468jbnt8o4m; _identity-backend=4cfd49342fa28b6e1bc87cac165a54b0d1009c3d194580c1311e61b6f81d71eba%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22knnOO3ZS_yFJ0TFam7W16YxO5BWe6Dub%22%2C2592000%5D%22%3B%7D; _csrf-backend=2bcefb45e5f46f7c150ef170c6791973ccc5e0739207d8868262e220de6e51bda%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%224gyWr6zi9emvf2gzltsdkR95B9eZV1X6%22%3B%7D'
+    'PATH' => 'C:\\Program Files\\Microsoft MPI\\Bin\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\xampp\\php;C:\\composer;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Program Files (x86)\\Bitvise SSH Client;C:\\Program Files\\Git\\cmd;C:\\Program Files\\Java\\jdk1.8.0_77\\bin;C:\\Users\\rizky\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\rizky\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\rizky\\AppData\\Local\\.meteor;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Win32) OpenSSL/1.1.0g PHP/7.2.2'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/warta/backend/web/index.php'
+    'REMOTE_PORT' => '53564'
+    'REDIRECT_URL' => '/warta/backend/web/advertise'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/warta/backend/web/advertise'
+    'SCRIPT_NAME' => '/warta/backend/web/index.php'
+    'PHP_SELF' => '/warta/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1558667402.351
+    'REQUEST_TIME' => 1558667402
+]
