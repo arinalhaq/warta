@@ -81,7 +81,7 @@ class PostController extends Controller
     {
         $model = new Post();
 
-        $path = 'F:/xampp2/htdocs/advanced/common/assets/upload/';
+        $path = 'G:/xampp/htdocs/advanced/common/assets/upload/';
 
         if ($model->load(Yii::$app->request->post())) {
             $model->status = 0;
@@ -90,7 +90,7 @@ class PostController extends Controller
 
             $model->file->saveAs($path . $model->file->baseName . '.' . $model->file->extension);
 
-            $model->image = 'http://localhost/advanced/common/assets/upload/' . $model->file->baseName . '.' . $model->file->extension;
+            $model->image = '/advanced/common/assets/upload/' . $model->file->baseName . '.' . $model->file->extension;
             $model->file = null;
 
             $model->save(false);
@@ -113,7 +113,7 @@ class PostController extends Controller
     {
         $model = $this->findModel($id);
 
-        $path = 'F:/xampp2/htdocs/advanced/common/assets/upload/';
+        $path = 'G:/xampp2/htdocs/advanced/common/assets/upload/';
 
         if ($model->load(Yii::$app->request->post())) {
             $model->id_user = Yii::$app->user->id;
@@ -124,7 +124,7 @@ class PostController extends Controller
             } else {
                 $model->file->saveAs($path . $model->file->baseName . '.' . $model->file->extension);
 
-                $model->image = 'http://localhost/advanced/common/assets/upload/' . $model->file->baseName . '.' . $model->file->extension;
+                $model->image = '/advanced/common/assets/upload/' . $model->file->baseName . '.' . $model->file->extension;
                 $model->file = null;
             }
 

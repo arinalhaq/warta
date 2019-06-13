@@ -155,7 +155,7 @@ class PostController extends Controller
         }
         
         $this->findModel($id)->delete();
-
+        Yii::$app->session->setFlash('success', 'Post Deleted');
         return $this->redirect(['index']);
     }
 
@@ -196,6 +196,7 @@ class PostController extends Controller
         $news->status_news = 1;
         $news->date = date('d-m-Y');
         $news->save();
+        Yii::$app->session->setFlash('success', 'Post Published');
         return $this->redirect(['view', 'id' => $model->id_post]);
     }
 }
