@@ -8,7 +8,7 @@ use Yii;
  * This is the model class for table "komentar".
  *
  * @property int $id_comment
- * @property int $content
+ * @property string $content
  * @property int $created_at
  * @property int $updated_at
  * @property int $created_by
@@ -34,7 +34,8 @@ class Komentar extends \yii\db\ActiveRecord
     {
         return [
             [['content', 'created_at', 'updated_at', 'created_by', 'updated_by', 'id_news'], 'required'],
-            [['content', 'created_at', 'updated_at', 'created_by', 'updated_by', 'id_news'], 'integer'],
+            [['created_at', 'updated_at', 'created_by', 'updated_by', 'id_news'], 'integer'],
+            [['content'], 'string', 'max' => 255],
             [['id_news'], 'exist', 'skipOnError' => true, 'targetClass' => News::className(), 'targetAttribute' => ['id_news' => 'id_news']],
         ];
     }

@@ -267,79 +267,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>                      
                   </article>
                 </li>
-                <li>
-                  <article class="clearfix">
-                    <div class="widget-popular-posts__img-holder">
-                      <span class="widget-popular-posts__number">2</span>
-                      <div class="thumb-container">
-                        <a href="single-post.html">
-                          <img data-src="img/blog/popular_post_2.jpg" src="img/blog/popular_post_2.jpg" alt="" class="lazyload">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="widget-popular-posts__entry">
-                      <h3 class="widget-popular-posts__entry-title">
-                        <a href="single-post.html">8 Hidden Costs of Starting and Running a Business</a>
-                      </h3>
-                    </div>                      
-                  </article>
-                </li>
-                <li>
-                  <article class="clearfix">
-                    <div class="widget-popular-posts__img-holder">
-                      <span class="widget-popular-posts__number">3</span>
-                      <div class="thumb-container">
-                        <a href="single-post.html">
-                          <img data-src="img/blog/popular_post_3.jpg" src="img/blog/popular_post_3.jpg" alt="" class="lazyload">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="widget-popular-posts__entry">
-                      <h3 class="widget-popular-posts__entry-title">
-                        <a href="single-post.html">The iPhone of Drones Is Being Built by This Teenager</a>
-                      </h3>
-                    </div>                      
-                  </article>
-                </li>
-                <li>
-                  <article class="clearfix">
-                    <div class="widget-popular-posts__img-holder">
-                      <span class="widget-popular-posts__number">4</span>
-                      <div class="thumb-container">
-                        <a href="single-post.html">
-                          <img data-src="img/blog/popular_post_4.jpg" src="img/blog/popular_post_4.jpg" alt="" class="lazyload">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="widget-popular-posts__entry">
-                      <h3 class="widget-popular-posts__entry-title">
-                        <a href="single-post.html">Check Out This Video of Apple's New Futuristic Campus, Shot by a Drone</a>
-                      </h3>
-                    </div>                      
-                  </article>
-                </li>
-                <li>
-                  <article class="clearfix">
-                    <div class="widget-popular-posts__img-holder">
-                      <span class="widget-popular-posts__number">5</span>
-                      <div class="thumb-container">
-                        <a href="single-post.html">
-                          <img data-src="img/blog/popular_post_5.jpg" src="img/blog/popular_post_5.jpg" alt="" class="lazyload">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="widget-popular-posts__entry">
-                      <h3 class="widget-popular-posts__entry-title">
-                        <a href="single-post.html">The New Media Moguls of Southeast Asia</a>
-                      </h3>
-                    </div>                      
-                  </article>
-                </li>
               </ul>
             </div> <!-- end widget popular posts -->
 
             <!-- Widget Newsletter -->
-            <div class="widget widget_mc4wp_form_widget">
+            <!-- <div class="widget widget_mc4wp_form_widget">
               <h4 class="widget-title">Subscribe for Neotech news and receive daily updates</h4>
               <form id="mc4wp-form-1" class="mc4wp-form" method="post">
                 <div class="mc4wp-form-fields">
@@ -352,7 +284,7 @@ $this->params['breadcrumbs'][] = $this->title;
                   </p>
                 </div>
               </form>
-            </div> <!-- end widget newsletter -->
+            </div> end widget newsletter -->
 
             <!-- Widget socials -->
             <div class="widget widget-socials">

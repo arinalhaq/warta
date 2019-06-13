@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
@@ -46,37 +47,43 @@ $this->params['breadcrumbs'][] = $this->title;
 
                         <div class="row mt-30">
 
-                            <div class="col-md-6">
-                                <article class="entry">
-                                    <div class="entry__img-holder">
-                                        <a href="single-post.html">
-                                            <div class="thumb-container">
-                                                <img data-src="img/blog/grid_post_img_1.jpg" src="img/blog/grid_post_img_1.jpg" class="entry__img lazyload" alt="" />
-                                            </div>
-                                        </a>
-                                    </div>
+                        <?php foreach($dataProvider as $news): ?>
+                <div class="col-md-4 col-sm-6">
+                  <article class="entry">                
+                    <div class="entry__img-holder">
+                      <a href="<?= Url::to(['news/view/','id'=> $news->id_news]);?>">
+                        <div class="thumb-container">
+                          <img data-src="<?= $news->post->image; ?>" src="<?= $news->post->image; ?>" class="entry__img lazyload" alt="" height=300px width=400px/>
+                        </div>
+                      </a>
+                    </div>
 
-                                    <div class="entry__body">
-                                        <div class="entry__header">
-                                            <a href="categories.html" class="entry__meta-category">devices</a>
-                                            <h2 class="entry__title">
-                                                <a href="single-post.html">Satelite cost tens of millions or even hundreds of millions of dollars to build</a>
-                                            </h2>
-                                            <ul class="entry__meta">
-                                                <li class="entry__meta-date">
-                                                    21 October, 2017
-                                                </li>
-                                                <li class="entry__meta-author">
-                                                    by <a href="#">DeoThemes</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="entry__excerpt">
-                                            <p>Point of Sale hardware, the till at a shop check out, has become very complex over the past ten years. Modern POS hardware includes the cash till, bar-code readers...</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
+                    <div class="entry__body">
+                      <div class="entry__header">
+                        <a href="<?= Url::to(['category/view/','id'=> $news->post->id_category]);?>" class="entry__meta-category"><?= $news->post->category->category ?></a>
+                        <h2 class="entry__title">
+                          <a href="<?= Url::to(['news/view/','id'=> $news->id_news]);?>"><?= $news->post->title; ?></a>
+                        </h2>
+                        <ul class="entry__meta">
+                          <li class="entry__meta-date">
+                            <?= Yii::$app->formatter->asDate($news->post->created_at); ?>
+                          </li>
+                          <li class="entry__meta-rating">
+                            <i class="ui-star"></i><!--
+                            --><i class="ui-star"></i><!--
+                            --><i class="ui-star"></i><!--
+                            --><i class="ui-star"></i><!--
+                            --><i class="ui-star-outline"></i>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- <div class="entry__excerpt">
+                        <p>Point of Sale hardware, the till at a shop check out, has become very complex over the past ten years. Modern POS hardware includes the cash till, bar-code readers...</p>
+                      </div> -->
+                    </div>
+                  </article>
+                </div>
+                <?php endforeach?>
                         </div>
                     </div>
                 </div>
