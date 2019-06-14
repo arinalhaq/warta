@@ -145,4 +145,31 @@ class NewsController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+    //likes
+    public function actionTestPjax1($id) {
+        // try get like per post
+        if (!empty($id) && !Yii::$app->user->isGuest) {
+            $data = Like::find()->where(['user_id' => Yii::$app->user->id, 'post_id' => $id])->one();
+    
+            if (!empty($like)) {
+                // set from like /dislike
+                if (empty($data)) {
+                    // new record
+                    $data = new Like;
+                    $data->post_id = $post_id;
+                }
+                $data->like = $like;
+                $data->save();
+            } else {
+                // we want to get the current state
+                if (!empty($data)) {
+                    $like = $data->like;
+                }
+            }
+        } else {
+            // error
+        }
+        return $this->render('test-pjax1', ['like' => $like, 'time' => time()]);
+    }
 }
