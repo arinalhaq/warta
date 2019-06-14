@@ -14,6 +14,7 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\models\News;
 use frontend\models\NewsSearch;
+use yii\data\Pagination;
 
 /**
  * Site controller
@@ -75,11 +76,26 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $data = new NewsSearch();
-        $dataProvider = $data->search(Yii::$app->request->queryParams);
+        // $dataProvider = $data->search(Yii::$app->request->queryParams);
+        $query = NewsSearch::find()->joinWith('post')->orderBy(['created_at' => SORT_DESC]);
+        $count = $query->count();
+        //creating the pagination object
+        $pagination = new Pagination(['totalCount' => $count, 'defaultPageSize' => 9]);
+        //limit the query using the pagination and retrieve the users
+        $dataProvider = $query->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
 
+            $pagination2 = new Pagination(['totalCount' => $count, 'defaultPageSize' => 3]);
+            //limit the query using the pagination and retrieve the users
+            $dataProvider2 = $query->offset($pagination2->offset)
+                ->limit($pagination2->limit)
+                ->all();
         return $this->render('index', [
             'data' => $data,
-            'dataProvider' => $dataProvider->query->all(),
+            'dataProvider' => $dataProvider,
+            'pagination' => $pagination,
+            'dataProvider2' => $dataProvider2,
         ]);
     }
 

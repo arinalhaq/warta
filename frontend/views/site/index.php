@@ -22,55 +22,23 @@ $this->title = 'My Yii Application';
       <section class="featured-posts-masonry">
         <div class="container">    
 
+        <?php foreach($dataProvider2 as $data) : ?>
           <div class="featured-posts-masonry__item featured-posts-masonry__item">        
             <article class="entry featured-posts-masonry__entry">
-              <div class="thumb-bg-holder" style="background-image: url(img/blog/hero_slider/featured_img_1.jpg);">
-                <a href="single-post.html" class="thumb-url"></a>
+              <div class="thumb-bg-holder" style="background-image: url(<?= $data->post->image ?>);">
+                <a href="<?= Url::to(['news/view/','id'=> $data->id_news]);?>" class="thumb-url"></a>
                 <div class="bottom-gradient"></div>
               </div>
 
               <div class="thumb-text-holder">
-                <a href="categories.html" class="entry__meta-category entry__meta-category--label">Startups</a>   
+                <a href="<?= Url::to(['category/view/','id'=> $data->post->id_category]);?>" class="entry__meta-category entry__meta-category--label"><?= $data->post->category->category ?></a>   
                 <h2 class="entry__title--lg entry__title--white">
-                  <a href="single-post.html">Technology's impact on marketing</a>
+                  <a href="<?= Url::to(['news/view/','id'=> $data->id_news]);?>"><?= $data->post->title ?></a>
                 </h2>
               </div>
             </article>
           </div>
-
-          <div class="featured-posts-masonry__item featured-posts-masonry__item">        
-            <article class="entry featured-posts-masonry__entry">
-              <div class="thumb-bg-holder" style="background-image: url(img/blog/hero_slider/featured_img_2.jpg);">
-                <a href="single-post.html" class="thumb-url"></a>
-                <div class="bottom-gradient"></div>
-              </div>
-
-              <div class="thumb-text-holder">
-                <a href="categories.html" class="entry__meta-category entry__meta-category--label">Startups</a>   
-                <h2 class="thumb-entry-title">
-                  <a href="single-post.html">The Age of Artificial Intelligence</a>
-                </h2>
-              </div>
-            </article>
-          </div>
-
-          <div class="clear"></div>
-
-          <div class="featured-posts-masonry__item">        
-            <article class="entry featured-posts-masonry__entry">
-              <div class="thumb-bg-holder" style="background-image: url(img/blog/hero_slider/featured_img_3.jpg);">
-                <a href="single-post.html" class="thumb-url"></a>
-                <div class="bottom-gradient"></div>
-              </div>
-
-              <div class="thumb-text-holder">
-                <a href="categories.html" class="entry__meta-category entry__meta-category--label">Startups</a>   
-                <h2 class="thumb-entry-title">
-                  <a href="single-post.html">Technology's impact on marketing</a>
-                </h2>
-              </div>
-            </article>
-          </div>
+          <?php endforeach ?>
 
         </div>
       </section> <!-- end featured posts masonry -->
@@ -85,7 +53,7 @@ $this->title = 'My Yii Application';
 
               <!-- Reviews -->
               <div class="section-title-wrap">
-                <h3 class="section-title">Reviews</h3>
+                <h3 class="section-title">Recent News</h3>
               </div>
  
               <div class="row">
@@ -129,6 +97,13 @@ $this->title = 'My Yii Application';
                 </div>
                 <?php endforeach?>
               </div> <!-- end reviews -->
+
+              <div>
+              <?php echo \yii\widgets\LinkPager::widget([
+                  'pagination' => $pagination,
+                ]);
+                ?>
+              </div>
 
             </div> <!-- end posts -->
       

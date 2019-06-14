@@ -247,7 +247,7 @@ $this->params['breadcrumbs'][] = $this->title;
           <aside class="col-md-4 sidebar sidebar--right">
             
             <!-- Widget Popular Posts -->
-            <div class="widget widget-popular-posts">
+            <!-- <div class="widget widget-popular-posts">
               <h4 class="widget-title">Popular Posts</h4>
               <ul class="widget-popular-posts__list">
                 <li>
@@ -267,8 +267,76 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>                      
                   </article>
                 </li>
+                <li>
+                  <article class="clearfix">
+                    <div class="widget-popular-posts__img-holder">
+                      <span class="widget-popular-posts__number">2</span>
+                      <div class="thumb-container">
+                        <a href="single-post.html">
+                          <img data-src="img/blog/popular_post_2.jpg" src="img/blog/popular_post_2.jpg" alt="" class="lazyload">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="widget-popular-posts__entry">
+                      <h3 class="widget-popular-posts__entry-title">
+                        <a href="single-post.html">8 Hidden Costs of Starting and Running a Business</a>
+                      </h3>
+                    </div>                      
+                  </article>
+                </li>
+                <li>
+                  <article class="clearfix">
+                    <div class="widget-popular-posts__img-holder">
+                      <span class="widget-popular-posts__number">3</span>
+                      <div class="thumb-container">
+                        <a href="single-post.html">
+                          <img data-src="img/blog/popular_post_3.jpg" src="img/blog/popular_post_3.jpg" alt="" class="lazyload">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="widget-popular-posts__entry">
+                      <h3 class="widget-popular-posts__entry-title">
+                        <a href="single-post.html">The iPhone of Drones Is Being Built by This Teenager</a>
+                      </h3>
+                    </div>                      
+                  </article>
+                </li>
+                <li>
+                  <article class="clearfix">
+                    <div class="widget-popular-posts__img-holder">
+                      <span class="widget-popular-posts__number">4</span>
+                      <div class="thumb-container">
+                        <a href="single-post.html">
+                          <img data-src="img/blog/popular_post_4.jpg" src="img/blog/popular_post_4.jpg" alt="" class="lazyload">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="widget-popular-posts__entry">
+                      <h3 class="widget-popular-posts__entry-title">
+                        <a href="single-post.html">Check Out This Video of Apple's New Futuristic Campus, Shot by a Drone</a>
+                      </h3>
+                    </div>                      
+                  </article>
+                </li>
+                <li>
+                  <article class="clearfix">
+                    <div class="widget-popular-posts__img-holder">
+                      <span class="widget-popular-posts__number">5</span>
+                      <div class="thumb-container">
+                        <a href="single-post.html">
+                          <img data-src="img/blog/popular_post_5.jpg" src="img/blog/popular_post_5.jpg" alt="" class="lazyload">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="widget-popular-posts__entry">
+                      <h3 class="widget-popular-posts__entry-title">
+                        <a href="single-post.html">The New Media Moguls of Southeast Asia</a>
+                      </h3>
+                    </div>                      
+                  </article>
+                </li>
               </ul>
-            </div> <!-- end widget popular posts -->
+            </div> end widget popular posts -->
 
             <!-- Widget Newsletter -->
             <!-- <div class="widget widget_mc4wp_form_widget">
@@ -340,7 +408,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <!-- Widget Latest Reviews -->
             <div class="widget widget-latest-reviews">
               <h4 class="widget-title">Latest Reviews</h4>
-              <article class="entry">
+              <!-- <article class="entry">
                 <div class="entry__img-holder">
                   <a href="single-post.html">
                     <div class="thumb-container">
@@ -358,27 +426,28 @@ $this->params['breadcrumbs'][] = $this->title;
                   </div>
                   <ul class="entry__meta">
                     <li class="entry__meta-rating">
-                      <i class="ui-star"></i><!--
-                      --><i class="ui-star"></i><!--
-                      --><i class="ui-star"></i><!--
-                      --><i class="ui-star"></i><!--
-                      --><i class="ui-star-outline"></i>
+                      <i class="ui-star"></i>
+                      <i class="ui-star"></i>
+                      <i class="ui-star"></i>
+                      <i class="ui-star"></i>
+                      <i class="ui-star-outline"></i>
                     </li>
                   </ul>
                 </div>
-              </article>
+              </article> -->
               <ul class="post-list-small">
+              <?php foreach($dataProvider as $data) : ?>
                 <li class="post-list-small__item">
                   <article class="post-list-small__entry">
-                    <a href="single-post.html" class="clearfix">
+                    <a href="<?= Url::to(['news/view', 'id'=>$data->id_news]) ?>" class="clearfix">
                       <div class="post-list-small__img-holder">
                         <div class="thumb-container">
-                          <img src="img/blog/post_list_small_2.jpg" class="post-list-small__img" alt="">
+                          <img src="<?= $data->post->image ?>" class="post-list-small__img" alt="">
                         </div>
                       </div>
                       <div class="post-list-small__body">
                         <h3 class="post-list-small__entry-title">
-                          The iPhone of Drones Is Being Built by This Teenager
+                          <?= $data->post->title ?>
                         </h3>
                         <ul class="entry__meta">
                           <li class="entry__meta-rating">
@@ -393,31 +462,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     </a>                                        
                   </article>
                 </li>
-                <li class="post-list-small__item">
-                  <article class="post-list-small__entry">
-                    <a href="single-post.html" class="clearfix">
-                      <div class="post-list-small__img-holder">
-                        <div class="thumb-container">
-                          <img src="img/blog/post_list_small_1.jpg" class="post-list-small__img" alt="">
-                        </div>
-                      </div>
-                      <div class="post-list-small__body">
-                        <h3 class="post-list-small__entry-title">
-                          What Indie Beauty Companies Can Teach Entrepreneurs About Scaling
-                        </h3>
-                        <ul class="entry__meta">
-                          <li class="entry__meta-rating">
-                            <i class="ui-star"></i><!--
-                            --><i class="ui-star"></i><!--
-                            --><i class="ui-star"></i><!--
-                            --><i class="ui-star"></i><!--
-                            --><i class="ui-star"></i>
-                          </li>
-                        </ul>
-                      </div>
-                    </a>                                        
-                  </article>
-                </li>
+                <?php endforeach ?>
               </ul>
             </div> <!-- end widget latest reviews -->
 

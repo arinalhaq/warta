@@ -10,7 +10,7 @@ use frontend\models\News;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\data\ActiveDataProvider;
+use yii\data\Pagination;
 
 /**
  * CategoryController implements the CRUD actions for Category model.
@@ -55,13 +55,20 @@ class CategoryController extends Controller
      */
     public function actionView($id)
     {
-        $post = new Post();
-        $query = Post::find()->where(['id_category' => $id]);
-        $query2 = News::find()->joinWith('post')->where(['post.id_category' => $id])->orderBy(['post.created_at' => SORT_DESC]);
-        $dataProvider = new ActiveDataProvider(['query' => $query2]);
+        //$post = new Post();
+        //$query = Post::find()->where(['id_category' => $id]);
+        $query = News::find()->joinWith('post')->where(['post.id_category' => $id])->orderBy(['post.created_at' => SORT_DESC]);
+        $count = $query->count();
+        //creating the pagination object
+        $pagination = new Pagination(['totalCount' => $count, 'defaultPageSize' => 9]);
+        //limit the query using the pagination and retrieve the users
+        $dataProvider = $query->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
         return $this->render('view', [
             'model' => $this->findModel($id),
-            'dataProvider' => $dataProvider->query->all(),
+            'dataProvider' => $dataProvider,
+            'pagination' => $pagination,
         ]);
     }
 

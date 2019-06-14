@@ -76,8 +76,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <br><br><br>
 
 <div id="content">
-    <b><?php echo Location::findOne($model->id_location)->city ?> - </b>
-    <?php echo $model->content ?>
+    <b><?= Location::findOne($model->id_location)->city ?> - </b>
+    <?= $model->content ?>
 </div>
 
 <style>

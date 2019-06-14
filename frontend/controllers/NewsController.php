@@ -9,7 +9,8 @@ use frontend\models\Komentar;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\data\ActiveDataProvider;
+use yii\data\Pagination;
 /**
  * NewsController implements the CRUD actions for News model.
  */
@@ -56,6 +57,16 @@ class NewsController extends Controller
         $komentar = new Komentar();
         $model = $this->findModel($id);
 
+        $query = NewsSearch::find()->joinWith('post')->orderBy(['created_at' => SORT_DESC]);
+        $count = $query->count();
+        //creating the pagination object
+        $pagination = new Pagination(['totalCount' => $count, 'defaultPageSize' => 5]);
+        //limit the query using the pagination and retrieve the users
+        $dataProvider = $query->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+
         if ($komentar->load(Yii::$app->request->post()) && $komentar->save()) {
             return $this->redirect(['view', 'id' => $id]);
         }
@@ -63,6 +74,7 @@ class NewsController extends Controller
         return $this->render('view', [
             'model' => $model,
             'komentar' => $komentar,
+            'dataProvider' => $dataProvider,
         ]);
     }
 

@@ -2,9 +2,13 @@
 use yii\helpers\Url;
 use frontend\models\Category;
 use backend\models\CategorySearch;
+use frontend\models\LocationSearch;
 
 $category = new CategorySearch();
 $dataProvider = $category->search(Yii::$app->request->queryParams)->query->all();
+
+$location = new LocationSearch();
+$dataProvider2 = $location->search(Yii::$app->request->queryParams)->query->all();
 ?>
 
 <header class="nav">
@@ -57,10 +61,9 @@ $dataProvider = $category->search(Yii::$app->request->queryParams)->query->all()
             <li class="nav__dropdown">
               <a href="catalog.html">Local News</a>
               <ul class="nav__dropdown-menu">
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="404.html">404</a></li>
+              <?php foreach($dataProvider2 as $data): ?>
+                <li><a href="<?= Url::to(['location/view', 'id' => $data->id_location]) ?>"><?= $data->city?></a></li>
+                <?php endforeach ?>
               </ul>
             </li>
 
